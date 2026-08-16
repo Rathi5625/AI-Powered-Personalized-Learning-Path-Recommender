@@ -3,8 +3,10 @@ package com.learningpath.repository;
 import com.learningpath.entity.CourseSkill;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -21,6 +23,13 @@ public interface CourseSkillRepository extends JpaRepository<CourseSkill, UUID> 
 
     @EntityGraph(attributePaths = {"course", "skill"})
     List<CourseSkill> findBySkillId(UUID skillId);
+
+    @EntityGraph(attributePaths = {"course", "skill"})
+    List<CourseSkill> findBySkillIdIn(Collection<UUID> skillIds);
+
+    @EntityGraph(attributePaths = {"course", "skill"})
+    @Query("SELECT cs FROM CourseSkill cs")
+    List<CourseSkill> findAllWithCourseAndSkill();
 
     void deleteByCourseIdAndSkillId(UUID courseId, UUID skillId);
 }

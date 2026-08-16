@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "model_type": "GradientBoostingClassifier",
+  "training_samples": 8000,
+  "test_samples": 2000,
+  "feature_names": [
+    "skill_gap_score",
+    "career_priority_score",
+    "skill_coverage",
+    "proficiency_gap",
+    "difficulty_match",
+    "course_rating",
+    "preference_match",
+    "mandatory_skill_match",
+    "course_duration_match",
+    "course_quality_score"
+  ],
+  "random_state": 42,
+  "accuracy": 0.802,
+  "precision": 0.7736,
+  "recall": 0.7497,
+  "f1": 0.7614,
+  "f1_score": 0.7614,
+  "roc_auc": 0.8862,
+  "cv_f1": 0.7646,
+  "cv_f1_std": 0.0119,
+  "training_timestamp": "2026-08-16T09:37:19.052718+00:00"
+}

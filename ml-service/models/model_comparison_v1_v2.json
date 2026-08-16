@@ -1,0 +1,9 @@
+{
+  "activeModel": "1.0",
+  "candidateModel": "2.0-candidate",
+  "decision": "INSUFFICIENT_DATA",
+  "reason": "Candidate Model v2 ('candidate_recommendation_model_v2.joblib') has not been trained yet.",
+  "evaluationDatasetSize": 0,
+  "minF1ImprovementThreshold": 0.01,
+  "timestamp": "2026-08-16T10:22:32.317648+00:00"
+}
