@@ -1,6 +1,8 @@
 package com.learningpath.entity;
 
 import com.learningpath.entity.enums.ExperienceLevel;
+import com.learningpath.entity.enums.LearningStyle;
+import com.learningpath.entity.enums.PreferredContentType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -39,4 +41,15 @@ public class User extends BaseEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "experience_level", length = 30)
     private ExperienceLevel experienceLevel;
+
+    @Column(name = "daily_learning_hours")
+    private Integer dailyLearningHours;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "learning_style", length = 30)
+    private LearningStyle learningStyle;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "preferred_content_type", length = 30)
+    private PreferredContentType preferredContentType;
 }

@@ -1,7 +1,10 @@
 package com.learningpath.entity;
 
+import com.learningpath.entity.enums.SkillDifficulty;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -33,4 +36,8 @@ public class Skill extends BaseEntity {
 
     @Column(columnDefinition = "TEXT")
     private String description;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 30)
+    private SkillDifficulty difficulty;
 }
