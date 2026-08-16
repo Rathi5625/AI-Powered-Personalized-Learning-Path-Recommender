@@ -32,4 +32,7 @@ public class Career extends BaseEntity {
 
     @Column(length = 100)
     private String industry;
+
+    @Column(length = 100)
+    private String category;
 }

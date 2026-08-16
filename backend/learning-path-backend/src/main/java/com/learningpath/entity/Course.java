@@ -1,6 +1,7 @@
 package com.learningpath.entity;
 
 import com.learningpath.entity.enums.CourseDifficulty;
+import com.learningpath.entity.enums.CourseType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -21,7 +22,9 @@ import java.math.BigDecimal;
         indexes = {
                 @Index(name = "idx_courses_title", columnList = "title"),
                 @Index(name = "idx_courses_provider", columnList = "provider"),
-                @Index(name = "idx_courses_difficulty", columnList = "difficulty")
+                @Index(name = "idx_courses_difficulty", columnList = "difficulty"),
+                @Index(name = "idx_courses_course_type", columnList = "course_type"),
+                @Index(name = "idx_courses_is_free", columnList = "is_free")
         }
 )
 @Getter
@@ -46,10 +49,28 @@ public class Course extends BaseEntity {
     @Column(name = "duration_minutes")
     private Integer durationMinutes;
 
+    @Column(name = "duration_hours")
+    private Double durationHours;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "course_type", length = 30)
+    private CourseType courseType;
+
+    @Column(length = 50)
+    @Builder.Default
+    private String language = "English";
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 30)
     private CourseDifficulty difficulty;
 
     @Column(precision = 3, scale = 2)
     private BigDecimal rating;
+
+    @Column(precision = 10, scale = 2)
+    private BigDecimal price;
+
+    @Column(name = "is_free", nullable = false)
+    @Builder.Default
+    private boolean isFree = false;
 }

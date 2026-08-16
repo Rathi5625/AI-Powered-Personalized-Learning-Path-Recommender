@@ -1,6 +1,7 @@
 package com.learningpath.entity;
 
 import com.learningpath.entity.enums.ProficiencyLevel;
+import com.learningpath.entity.enums.SkillPriority;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -43,6 +44,11 @@ public class CareerSkill extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "skill_id", nullable = false, foreignKey = @ForeignKey(name = "fk_career_skills_skill"))
     private Skill skill;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 30)
+    @Builder.Default
+    private SkillPriority priority = SkillPriority.HIGH;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "required_proficiency", nullable = false, length = 30)
