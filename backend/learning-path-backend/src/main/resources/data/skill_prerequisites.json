@@ -1,0 +1,60 @@
+{
+  "FrontEnd Development": {
+    "Internet Basics": [],
+    "HTML": [
+      "Internet Basics"
+    ],
+    "CSS": [
+      "HTML"
+    ],
+    "JavaScript": [
+      "HTML",
+      "CSS"
+    ],
+    "Package Managers": [
+      "Internet Basics"
+    ],
+    "JavaScript Frameworks": [
+      "JavaScript",
+      "Package Managers"
+    ],
+    "REST APIs": [
+      "JavaScript",
+      "Internet Basics"
+    ],
+    "GraphQL": [
+      "REST APIs",
+      "JavaScript Frameworks"
+    ]
+  },
+  "BackEnd Development": {
+    "Java": [
+      "Internet Basics"
+    ],
+    "Spring Boot": [
+      "Java"
+    ],
+    "SQL Databases": [
+      "Internet Basics"
+    ],
+    "ORM / Hibernate": [
+      "Java",
+      "SQL Databases"
+    ],
+    "Backend REST APIs": [
+      "Java",
+      "Spring Boot"
+    ]
+  },
+  "Data Science": {
+    "Python": [
+      "Internet Basics"
+    ],
+    "Data Analysis": [
+      "Python"
+    ],
+    "Machine Learning": [
+      "Data Analysis"
+    ]
+  }
+}
