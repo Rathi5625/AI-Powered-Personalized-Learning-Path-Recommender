@@ -63,6 +63,8 @@ class PersonalizedLearningPathServiceTest {
     private AiService aiService;
     @Mock
     private LearningPathValidator validator;
+    @Mock
+    private LearningPathPersistenceService persistenceService;
 
     private PersonalizedLearningPathService learningPathService;
 
@@ -84,7 +86,8 @@ class PersonalizedLearningPathServiceTest {
                 promptBuilder,
                 aiService,
                 validator,
-                new ObjectMapper()
+                new ObjectMapper(),
+                persistenceService
         );
 
         userId = UUID.randomUUID();

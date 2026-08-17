@@ -45,6 +45,18 @@ public class LearningPathItem extends BaseEntity {
     @JoinColumn(name = "target_skill_id", foreignKey = @ForeignKey(name = "fk_path_items_skill"))
     private Skill targetSkill;
 
+    @Column(name = "phase_number")
+    private Integer phaseNumber;
+
+    @Column(name = "phase_title", length = 150)
+    private String phaseTitle;
+
+    @Column(name = "estimated_duration", length = 50)
+    private String estimatedDuration;
+
+    @Column(name = "explanation", columnDefinition = "TEXT")
+    private String explanation;
+
     @Column(name = "item_order", nullable = false)
     private Integer itemOrder;
 

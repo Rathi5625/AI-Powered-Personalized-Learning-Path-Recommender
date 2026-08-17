@@ -46,6 +46,7 @@ public class PersonalizedLearningPathService {
     private final AiService aiService;
     private final LearningPathValidator validator;
     private final ObjectMapper objectMapper;
+    private final LearningPathPersistenceService persistenceService;
 
     public PersonalizedLearningPathResponse generateLearningPath(UUID userId, UUID careerId) {
         log.info("[PersonalizedLearningPathService] Generating learning path for userId: {}, careerId: {}", userId, careerId);
@@ -120,10 +121,13 @@ public class PersonalizedLearningPathService {
         ValidationResult contextVal = validator.validateContext(context);
         if (!contextVal.valid()) {
             log.warn("[PersonalizedLearningPathService] Pre-validation failed for context: {}", contextVal.errors());
-            return generateRuleBasedFallback(context);
+            PersonalizedLearningPathResponse fallback = generateRuleBasedFallback(context);
+            persistenceService.saveLearningPath(userId, careerId, fallback);
+            return fallback;
         }
 
         // Step 5: Attempt Gemini AI Generation with AT MOST 1 Retry
+        PersonalizedLearningPathResponse finalResponse = null;
         for (int attempt = 1; attempt <= 2; attempt++) {
             try {
                 String promptText = promptBuilder.buildPrompt(context);
@@ -148,7 +152,8 @@ public class PersonalizedLearningPathService {
                         ValidationResult valResult = validator.validateResponse(parsed, context);
                         if (valResult.valid()) {
                             log.info("[PersonalizedLearningPathService] Successfully validated Gemini learning path on attempt {}.", attempt);
-                            return parsed;
+                            finalResponse = parsed;
+                            break;
                         } else {
                             log.warn("[PersonalizedLearningPathService] Attempt {} AI validation failed: {}", attempt, valResult.errors());
                         }
@@ -159,9 +164,20 @@ public class PersonalizedLearningPathService {
             }
         }
 
-        // Step 6: Fallback Deterministic Rule-Based Path
-        log.warn("[PersonalizedLearningPathService] All AI generation attempts failed validation. Triggering rule-based fallback.");
-        return generateRuleBasedFallback(context);
+        // Step 6: Fallback Deterministic Rule-Based Path if AI generation failed validation
+        if (finalResponse == null) {
+            log.warn("[PersonalizedLearningPathService] All AI generation attempts failed validation. Triggering rule-based fallback.");
+            finalResponse = generateRuleBasedFallback(context);
+        }
+
+        // Step 7: Persist the validated path as ACTIVE in database
+        try {
+            persistenceService.saveLearningPath(userId, careerId, finalResponse);
+        } catch (Exception e) {
+            log.error("[PersonalizedLearningPathService] Failed to persist learning path for userId={}: {}", userId, e.getMessage());
+        }
+
+        return finalResponse;
     }
 
     private PersonalizedLearningPathResponse parseGeminiResponse(AiResponse aiResponse, LearningPathContext context) {
