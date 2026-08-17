@@ -149,4 +149,43 @@ class SkillGapIntegrationTest {
         assertEquals(GapType.FULL_GAP, springBootItem.gapType());
         assertTrue(springBootItem.explanation().contains("Spring Boot is a critical required skill"));
     }
+
+    @Test
+    void testSkillGapAnalysis_WithNullCareerId_ResolvesUserTargetCareer() {
+        UserCreateRequest userReq = new UserCreateRequest(
+                "Auto Career User",
+                "auto.career." + UUID.randomUUID() + "@example.com",
+                "Java Backend Developer",
+                ExperienceLevel.BEGINNER,
+                2,
+                LearningStyle.VISUAL,
+                PreferredContentType.VIDEO
+        );
+        UserResponse user = userService.createUser(userReq);
+
+        SkillGapAnalysisResponse analysis = skillGapService.analyzeSkillGap(user.id(), null);
+
+        assertNotNull(analysis);
+        assertEquals("Java Backend Developer", analysis.careerName());
+        assertEquals(10, analysis.totalRequiredSkills());
+    }
+
+    @Test
+    void testSkillGapAnalysis_WithNullCareerIdAndNoTargetCareer_ThrowsException() {
+        UserCreateRequest userReq = new UserCreateRequest(
+                "No Career User",
+                "no.career." + UUID.randomUUID() + "@example.com",
+                null,
+                ExperienceLevel.BEGINNER,
+                2,
+                LearningStyle.VISUAL,
+                PreferredContentType.VIDEO
+        );
+        UserResponse user = userService.createUser(userReq);
+
+        org.junit.jupiter.api.Assertions.assertThrows(
+                com.learningpath.exception.ResourceNotFoundException.class,
+                () -> skillGapService.analyzeSkillGap(user.id(), null)
+        );
+    }
 }

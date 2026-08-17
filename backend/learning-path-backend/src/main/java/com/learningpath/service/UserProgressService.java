@@ -110,6 +110,59 @@ public class UserProgressService {
         return toResponse(progress);
     }
 
+    /**
+     * Calculates aggregated learning progress summary metrics for the learner.
+     *
+     * @param userId The learner's UUID.
+     * @return {@link com.learningpath.dto.UserProgressSummaryResponse} with overall completion stats.
+     */
+    @Transactional(readOnly = true)
+    public com.learningpath.dto.UserProgressSummaryResponse getProgressSummary(UUID userId) {
+        if (!userRepository.existsById(userId)) {
+            throw new ResourceNotFoundException("User not found with id: " + userId);
+        }
+
+        List<UserProgress> progressList = progressRepository.findByUserId(userId);
+        if (progressList.isEmpty()) {
+            return new com.learningpath.dto.UserProgressSummaryResponse(0, 0, 0, 0, 0, 0.0);
+        }
+
+        int completed = 0;
+        int inProgress = 0;
+        int notStarted = 0;
+        int paused = 0;
+        double totalPercentage = 0.0;
+
+        for (UserProgress p : progressList) {
+            ProgressStatus status = p.getStatus();
+            if (status == ProgressStatus.COMPLETED) {
+                completed++;
+                totalPercentage += 100.0;
+            } else if (status == ProgressStatus.IN_PROGRESS) {
+                inProgress++;
+                totalPercentage += (p.getCompletionPercentage() != null ? p.getCompletionPercentage().doubleValue() : 0.0);
+            } else if (status == ProgressStatus.PAUSED) {
+                paused++;
+                totalPercentage += (p.getCompletionPercentage() != null ? p.getCompletionPercentage().doubleValue() : 0.0);
+            } else {
+                notStarted++;
+                totalPercentage += 0.0;
+            }
+        }
+
+        int totalTracked = progressList.size();
+        double overallRate = Math.round((totalPercentage / totalTracked) * 100.0) / 100.0;
+
+        return new com.learningpath.dto.UserProgressSummaryResponse(
+                totalTracked,
+                completed,
+                inProgress,
+                notStarted,
+                paused,
+                overallRate
+        );
+    }
+
     // -------------------------------------------------------------------------
     // Private helpers
     // -------------------------------------------------------------------------

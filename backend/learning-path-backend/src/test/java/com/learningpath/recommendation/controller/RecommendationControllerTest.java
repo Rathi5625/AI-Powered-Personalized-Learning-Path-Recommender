@@ -21,6 +21,7 @@ import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.ArgumentMatchers.isNull;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -108,5 +109,23 @@ class RecommendationControllerTest {
                 .andExpect(status().isNotFound())
                 .andExpect(jsonPath("$.status").value(404))
                 .andExpect(jsonPath("$.message").value("User not found with id: " + nonExistentUserId));
+    }
+
+    @Test
+    void getRecommendations_withoutCareerId_shouldSucceed() throws Exception {
+        UUID userId = UUID.randomUUID();
+        UUID careerId = UUID.randomUUID();
+
+        RecommendationSummaryResponse summary = new RecommendationSummaryResponse(
+                userId, "John Doe", careerId, "Java Backend Developer", false, 0, List.of()
+        );
+
+        when(recommendationService.getRecommendationsForUser(eq(userId), isNull(), any(), any(), any()))
+                .thenReturn(summary);
+
+        mockMvc.perform(get("/api/users/{userId}/recommendations", userId))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.userId").value(userId.toString()))
+                .andExpect(jsonPath("$.careerName").value("Java Backend Developer"));
     }
 }

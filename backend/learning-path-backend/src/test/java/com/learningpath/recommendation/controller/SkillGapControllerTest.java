@@ -86,4 +86,21 @@ class SkillGapControllerTest {
                 .andExpect(jsonPath("$.gaps[0].skillName").value("Spring Boot"))
                 .andExpect(jsonPath("$.gaps[0].gapType").value("FULL_GAP"));
     }
+
+    @Test
+    void getSkillGaps_withoutCareerId_shouldSucceed() throws Exception {
+        UUID userId = UUID.randomUUID();
+        UUID careerId = UUID.randomUUID();
+
+        SkillGapAnalysisResponse response = new SkillGapAnalysisResponse(
+                userId, "John Doe", careerId, "Java Backend Developer", 5, 2, 1, 2, 40.0, List.of()
+        );
+
+        when(skillGapService.analyzeSkillGap(userId, null)).thenReturn(response);
+
+        mockMvc.perform(get("/api/users/{userId}/skill-gaps", userId))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.careerName").value("Java Backend Developer"))
+                .andExpect(jsonPath("$.totalRequiredSkills").value(5));
+    }
 }

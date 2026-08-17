@@ -184,6 +184,39 @@ class UserProgressServiceTest {
                 .isInstanceOf(ResourceNotFoundException.class);
     }
 
+    @Test
+    void getProgressSummary_returnsCorrectSummary_whenRecordsExist() {
+        when(userRepository.existsById(userId)).thenReturn(true);
+        UserProgress p1 = buildProgress(ProgressStatus.COMPLETED, new BigDecimal("100.00"));
+        UserProgress p2 = buildProgress(ProgressStatus.IN_PROGRESS, new BigDecimal("50.00"));
+        UserProgress p3 = buildProgress(ProgressStatus.NOT_STARTED, BigDecimal.ZERO);
+        UserProgress p4 = buildProgress(ProgressStatus.PAUSED, new BigDecimal("20.00"));
+        when(progressRepository.findByUserId(userId)).thenReturn(List.of(p1, p2, p3, p4));
+
+        com.learningpath.dto.UserProgressSummaryResponse summary = service.getProgressSummary(userId);
+
+        assertThat(summary).isNotNull();
+        assertThat(summary.totalCoursesTracked()).isEqualTo(4);
+        assertThat(summary.completedCourses()).isEqualTo(1);
+        assertThat(summary.inProgressCourses()).isEqualTo(1);
+        assertThat(summary.notStartedCourses()).isEqualTo(1);
+        assertThat(summary.pausedCourses()).isEqualTo(1);
+        assertThat(summary.overallCompletionRate()).isEqualTo(42.5); // (100 + 50 + 0 + 20) / 4 = 42.5
+    }
+
+    @Test
+    void getProgressSummary_returnsZeroes_whenNoRecordsExist() {
+        when(userRepository.existsById(userId)).thenReturn(true);
+        when(progressRepository.findByUserId(userId)).thenReturn(List.of());
+
+        com.learningpath.dto.UserProgressSummaryResponse summary = service.getProgressSummary(userId);
+
+        assertThat(summary).isNotNull();
+        assertThat(summary.totalCoursesTracked()).isEqualTo(0);
+        assertThat(summary.completedCourses()).isEqualTo(0);
+        assertThat(summary.overallCompletionRate()).isEqualTo(0.0);
+    }
+
     // ---
 
     private UserProgress buildProgress(ProgressStatus status, BigDecimal pct) {
