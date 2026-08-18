@@ -79,6 +79,9 @@ public class SecurityConfig {
                         })
                 )
                 .authorizeHttpRequests(auth -> auth
+                        // Admin Endpoints - requires ADMIN role
+                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
+
                         // Public Auth Endpoints
                         .requestMatchers(HttpMethod.POST, "/api/auth/signup", "/api/auth/login").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/auth/me").authenticated()

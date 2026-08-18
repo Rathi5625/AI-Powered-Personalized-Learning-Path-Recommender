@@ -111,10 +111,117 @@ public class RecommendationScoringEngine {
                 .setScale(1, RoundingMode.HALF_UP)
                 .doubleValue();
 
-        // Calculate combined Final Score (60% Rule + 40% ML if present)
+        return buildRecommendationWithWeights(
+                rank, course, matchedSkills, gapSkillsAddressed, teachesCriticalSkill,
+                ruleBasedScore, mlScore, 0.70, 0.30
+        );
+    }
+
+    public CourseRecommendationResponse scoreAndBuildRecommendation(
+            int rank,
+            Course course,
+            List<CourseSkill> courseSkills,
+            Map<String, SkillGapItemResponse> gapMap,
+            User user,
+            Double mlScore,
+            double ruleWeight,
+            double mlWeight
+    ) {
+        List<String> matchedSkills = new ArrayList<>();
+        List<String> gapSkillsAddressed = new ArrayList<>();
+
+        double courseGapScore = 0.0;
+        double maxPossibleGapScore = 0.0;
+        double highestPriorityWeight = 1.0;
+        boolean teachesCriticalSkill = false;
+
+        // Calculate max possible gap score across user's gaps
+        for (SkillGapItemResponse gap : gapMap.values()) {
+            if (gap.gapType() != GapType.NO_GAP) {
+                double priorityW = getPriorityWeight(gap.priority());
+                double mandatoryM = gap.mandatory() ? 1.5 : 1.0;
+                maxPossibleGapScore += 1.0 * priorityW * mandatoryM;
+            }
+        }
+        if (maxPossibleGapScore == 0.0) maxPossibleGapScore = 1.0;
+
+        // Evaluate course skills
+        for (CourseSkill cs : courseSkills) {
+            String skillName = cs.getSkill().getName();
+            matchedSkills.add(skillName);
+
+            SkillGapItemResponse gap = gapMap.get(skillName);
+            if (gap != null && gap.gapType() != GapType.NO_GAP) {
+                gapSkillsAddressed.add(skillName);
+
+                double gapWeight = gap.gapType() == GapType.FULL_GAP ? 1.0 : 0.7;
+                double priorityW = getPriorityWeight(gap.priority());
+                double mandatoryM = gap.mandatory() ? 1.5 : 1.0;
+
+                courseGapScore += gapWeight * priorityW * mandatoryM;
+
+                if (priorityW > highestPriorityWeight) {
+                    highestPriorityWeight = priorityW;
+                }
+                if (gap.priority() == SkillPriority.CRITICAL) {
+                    teachesCriticalSkill = true;
+                }
+            }
+        }
+
+        // 1. Skill Gap Match Score (0 - 100)
+        double scoreGapMatch = Math.min(100.0, (courseGapScore / maxPossibleGapScore) * 100.0);
+
+        // 2. Career Priority Score (0 - 100)
+        double scoreCareerPriority = (highestPriorityWeight / 4.0) * 100.0;
+
+        // 3. Skill Coverage Score (0 - 100)
+        long totalGapsCount = gapMap.values().stream().filter(g -> g.gapType() != GapType.NO_GAP).count();
+        double coverageRatio = totalGapsCount > 0 ? (double) gapSkillsAddressed.size() / totalGapsCount : 0.0;
+        double scoreSkillCoverage = Math.min(100.0, coverageRatio * 100.0);
+
+        // 4. Difficulty Match Score (0 - 100)
+        double scoreDifficultyMatch = calculateDifficultyMatch(user.getExperienceLevel(), course.getDifficulty());
+
+        // 5. Course Quality Score (0 - 100)
+        double scoreCourseQuality = calculateCourseQuality(course.getRating());
+
+        // 6. User Preference Score (0 - 100)
+        double scoreUserPreference = calculateUserPreference(user, course);
+
+        // Weighted Total Deterministic Rule-Based Score
+        double rawRuleScore = (scoreGapMatch * WEIGHT_GAP_MATCH)
+                + (scoreCareerPriority * WEIGHT_CAREER_PRIORITY)
+                + (scoreSkillCoverage * WEIGHT_SKILL_COVERAGE)
+                + (scoreDifficultyMatch * WEIGHT_DIFFICULTY_MATCH)
+                + (scoreCourseQuality * WEIGHT_COURSE_QUALITY)
+                + (scoreUserPreference * WEIGHT_USER_PREFERENCE);
+
+        double ruleBasedScore = BigDecimal.valueOf(rawRuleScore)
+                .setScale(1, RoundingMode.HALF_UP)
+                .doubleValue();
+
+        return buildRecommendationWithWeights(
+                rank, course, matchedSkills, gapSkillsAddressed, teachesCriticalSkill,
+                ruleBasedScore, mlScore, ruleWeight, mlWeight
+        );
+    }
+
+    private CourseRecommendationResponse buildRecommendationWithWeights(
+            int rank,
+            Course course,
+            List<String> matchedSkills,
+            List<String> gapSkillsAddressed,
+            boolean teachesCriticalSkill,
+            double ruleBasedScore,
+            Double mlScore,
+            double ruleWeight,
+            double mlWeight
+    ) {
+        // Calculate combined Final Score (Configurable Rule + ML combination)
         double rawFinalScore;
         if (mlScore != null) {
-            rawFinalScore = (ruleBasedScore * 0.60) + (mlScore * 0.40);
+            rawFinalScore = (ruleBasedScore * ruleWeight) + (mlScore * mlWeight);
         } else {
             rawFinalScore = ruleBasedScore;
         }
@@ -247,9 +354,9 @@ public class RecommendationScoringEngine {
         };
 
         int diffRank = switch (difficulty) {
-            case BEGINNER -> 1;
-            case INTERMEDIATE -> 2;
-            case ADVANCED -> 3;
+            case BEGINNER, EASY -> 1;
+            case INTERMEDIATE, MEDIUM -> 2;
+            case ADVANCED, HIGH -> 3;
             case ALL_LEVELS -> 1;
         };
 
@@ -276,7 +383,7 @@ public class RecommendationScoringEngine {
             CourseType type = course.getCourseType();
             if ((pref == PreferredContentType.VIDEO && type == CourseType.VIDEO_COURSE) ||
                 (pref == PreferredContentType.INTERACTIVE_EXERCISE && type == CourseType.INTERACTIVE_COURSE) ||
-                (pref == PreferredContentType.ARTICLE && type == CourseType.TEXT_TUTORIAL) ||
+                (pref == PreferredContentType.ARTICLE && (type == CourseType.TEXT_TUTORIAL || type == CourseType.DOCUMENTATION)) ||
                 (pref == PreferredContentType.PROJECT && type == CourseType.PROJECT_BASED)) {
                 score += 30.0;
             }

@@ -1,0 +1,2316 @@
+{
+  "Courses": {
+    "total_rows": 245,
+    "data_rows_count": 244,
+    "headers": [
+      "course_id",
+      "title",
+      "skill_tag",
+      "level",
+      "duration_hours",
+      "platform",
+      "link"
+    ],
+    "sample_rows": [
+      {
+        "course_id": "FE_01_01",
+        "title": "MDN: How the web works",
+        "skill_tag": "Internet Basics",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics"
+      },
+      {
+        "course_id": "FE_01_02",
+        "title": "MDN: Getting started with the Web",
+        "skill_tag": "Internet Basics",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website"
+      },
+      {
+        "course_id": "FE_01_03",
+        "title": "web.dev: Learn Performance",
+        "skill_tag": "Internet Basics",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/performance/"
+      },
+      {
+        "course_id": "FE_01_04",
+        "title": "freeCodeCamp: Responsive Web Design",
+        "skill_tag": "Internet Basics",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+      },
+      {
+        "course_id": "FE_02_01",
+        "title": "MDN: Structuring content with HTML",
+        "skill_tag": "HTML",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
+      }
+    ],
+    "all_rows": [
+      {
+        "course_id": "FE_01_01",
+        "title": "MDN: How the web works",
+        "skill_tag": "Internet Basics",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics"
+      },
+      {
+        "course_id": "FE_01_02",
+        "title": "MDN: Getting started with the Web",
+        "skill_tag": "Internet Basics",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website"
+      },
+      {
+        "course_id": "FE_01_03",
+        "title": "web.dev: Learn Performance",
+        "skill_tag": "Internet Basics",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/performance/"
+      },
+      {
+        "course_id": "FE_01_04",
+        "title": "freeCodeCamp: Responsive Web Design",
+        "skill_tag": "Internet Basics",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+      },
+      {
+        "course_id": "FE_02_01",
+        "title": "MDN: Structuring content with HTML",
+        "skill_tag": "HTML",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
+      },
+      {
+        "course_id": "FE_02_02",
+        "title": "MDN: Introduction to HTML",
+        "skill_tag": "HTML",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
+      },
+      {
+        "course_id": "FE_02_03",
+        "title": "freeCodeCamp: Responsive Web Design",
+        "skill_tag": "HTML",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+      },
+      {
+        "course_id": "FE_02_04",
+        "title": "web.dev: Learn HTML",
+        "skill_tag": "HTML",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/html/"
+      },
+      {
+        "course_id": "FE_03_01",
+        "title": "MDN: CSS styling basics",
+        "skill_tag": "CSS",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics"
+      },
+      {
+        "course_id": "FE_03_02",
+        "title": "MDN: CSS layout",
+        "skill_tag": "CSS",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout"
+      },
+      {
+        "course_id": "FE_03_03",
+        "title": "web.dev: Learn CSS",
+        "skill_tag": "CSS",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/css/"
+      },
+      {
+        "course_id": "FE_03_04",
+        "title": "freeCodeCamp: Responsive Web Design",
+        "skill_tag": "CSS",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+      },
+      {
+        "course_id": "FE_04_01",
+        "title": "MDN: JavaScript Guide",
+        "skill_tag": "JavaScript",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "course_id": "FE_04_02",
+        "title": "MDN: Dynamic scripting with JavaScript",
+        "skill_tag": "JavaScript",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting"
+      },
+      {
+        "course_id": "FE_04_03",
+        "title": "javascript.info",
+        "skill_tag": "JavaScript",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "javascript.info",
+        "link": "https://javascript.info/"
+      },
+      {
+        "course_id": "FE_04_04",
+        "title": "freeCodeCamp: JavaScript Algorithms and Data Structures",
+        "skill_tag": "JavaScript",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/"
+      },
+      {
+        "course_id": "FE_05_01",
+        "title": "MDN: Command line crash course",
+        "skill_tag": "CLI & Terminal Basics",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
+      },
+      {
+        "course_id": "FE_05_02",
+        "title": "GitHub Docs: About Git",
+        "skill_tag": "CLI & Terminal Basics",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "GitHub",
+        "link": "https://docs.github.com/en/get-started/learning-about-github/about-github"
+      },
+      {
+        "course_id": "FE_05_03",
+        "title": "The Missing Semester: Shell",
+        "skill_tag": "CLI & Terminal Basics",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "MIT",
+        "link": "https://missing.csail.mit.edu/2020/course-shell/"
+      },
+      {
+        "course_id": "FE_05_04",
+        "title": "freeCodeCamp: Command Line Basics",
+        "skill_tag": "CLI & Terminal Basics",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/news/command-line-for-beginners/"
+      },
+      {
+        "course_id": "FE_06_01",
+        "title": "Pro Git Book",
+        "skill_tag": "Version Control(Git & GitHub)",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Git",
+        "link": "https://git-scm.com/book/en/v2"
+      },
+      {
+        "course_id": "FE_06_02",
+        "title": "GitHub Skills: Introduction to GitHub",
+        "skill_tag": "Version Control(Git & GitHub)",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "GitHub",
+        "link": "https://skills.github.com/"
+      },
+      {
+        "course_id": "FE_06_03",
+        "title": "GitHub Docs: Git guides",
+        "skill_tag": "Version Control(Git & GitHub)",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "GitHub",
+        "link": "https://docs.github.com/en/get-started/git-basics"
+      },
+      {
+        "course_id": "FE_06_04",
+        "title": "Atlassian Git tutorials",
+        "skill_tag": "Version Control(Git & GitHub)",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Atlassian",
+        "link": "https://www.atlassian.com/git/tutorials"
+      },
+      {
+        "course_id": "FE_07_01",
+        "title": "Pro Git Book",
+        "skill_tag": "VCS Hosting",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Git",
+        "link": "https://git-scm.com/book/en/v2"
+      },
+      {
+        "course_id": "FE_07_02",
+        "title": "GitHub Skills: Introduction to GitHub",
+        "skill_tag": "VCS Hosting",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "GitHub",
+        "link": "https://skills.github.com/"
+      },
+      {
+        "course_id": "FE_07_03",
+        "title": "GitHub Docs: Git guides",
+        "skill_tag": "VCS Hosting",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "GitHub",
+        "link": "https://docs.github.com/en/get-started/git-basics"
+      },
+      {
+        "course_id": "FE_07_04",
+        "title": "Atlassian Git tutorials",
+        "skill_tag": "VCS Hosting",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Atlassian",
+        "link": "https://www.atlassian.com/git/tutorials"
+      },
+      {
+        "course_id": "FE_08_01",
+        "title": "npm: About npm",
+        "skill_tag": "Package Managers",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "npm",
+        "link": "https://docs.npmjs.com/about-npm"
+      },
+      {
+        "course_id": "FE_08_02",
+        "title": "npm: Getting started",
+        "skill_tag": "Package Managers",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "npm",
+        "link": "https://docs.npmjs.com/getting-started"
+      },
+      {
+        "course_id": "FE_08_03",
+        "title": "pnpm: Motivation",
+        "skill_tag": "Package Managers",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "pnpm",
+        "link": "https://pnpm.io/motivation"
+      },
+      {
+        "course_id": "FE_08_04",
+        "title": "Yarn: Getting Started",
+        "skill_tag": "Package Managers",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Yarn",
+        "link": "https://yarnpkg.com/getting-started"
+      },
+      {
+        "course_id": "FE_09_01",
+        "title": "Bootstrap Documentation",
+        "skill_tag": "CSS Frameworks",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Bootstrap",
+        "link": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+      },
+      {
+        "course_id": "FE_09_02",
+        "title": "Tailwind CSS Installation",
+        "skill_tag": "CSS Frameworks",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Tailwind CSS",
+        "link": "https://tailwindcss.com/docs/installation"
+      },
+      {
+        "course_id": "FE_09_03",
+        "title": "Material UI Introduction",
+        "skill_tag": "CSS Frameworks",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "MUI",
+        "link": "https://mui.com/material-ui/getting-started/"
+      },
+      {
+        "course_id": "FE_09_04",
+        "title": "Bulma Documentation",
+        "skill_tag": "CSS Frameworks",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Bulma",
+        "link": "https://bulma.io/documentation/"
+      },
+      {
+        "course_id": "FE_10_01",
+        "title": "React Learn",
+        "skill_tag": "JavaScript Frameworks",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "React",
+        "link": "https://react.dev/learn"
+      },
+      {
+        "course_id": "FE_10_02",
+        "title": "Vue Guide",
+        "skill_tag": "JavaScript Frameworks",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Vue.js",
+        "link": "https://vuejs.org/guide/introduction.html"
+      },
+      {
+        "course_id": "FE_10_03",
+        "title": "Angular Tutorial",
+        "skill_tag": "JavaScript Frameworks",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Angular",
+        "link": "https://angular.dev/tutorials/learn-angular"
+      },
+      {
+        "course_id": "FE_10_04",
+        "title": "Svelte Tutorial",
+        "skill_tag": "JavaScript Frameworks",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Svelte",
+        "link": "https://svelte.dev/tutorial/svelte/welcome-to-svelte"
+      },
+      {
+        "course_id": "FE_11_01",
+        "title": "GitHub Copilot documentation",
+        "skill_tag": "AI-Assisted Coding",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "GitHub",
+        "link": "https://docs.github.com/en/copilot"
+      },
+      {
+        "course_id": "FE_11_02",
+        "title": "MDN: AI on the Web",
+        "skill_tag": "AI-Assisted Coding",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/AI"
+      },
+      {
+        "course_id": "FE_11_03",
+        "title": "Google: AI for Developers",
+        "skill_tag": "AI-Assisted Coding",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Google",
+        "link": "https://ai.google.dev/"
+      },
+      {
+        "course_id": "FE_11_04",
+        "title": "Microsoft Learn: Generative AI",
+        "skill_tag": "AI-Assisted Coding",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Microsoft",
+        "link": "https://learn.microsoft.com/en-us/training/generative-ai/"
+      },
+      {
+        "course_id": "FE_12_01",
+        "title": "GitHub Copilot documentation",
+        "skill_tag": "Generative AI for Frontend",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "GitHub",
+        "link": "https://docs.github.com/en/copilot"
+      },
+      {
+        "course_id": "FE_12_02",
+        "title": "MDN: AI on the Web",
+        "skill_tag": "Generative AI for Frontend",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/AI"
+      },
+      {
+        "course_id": "FE_12_03",
+        "title": "Google: AI for Developers",
+        "skill_tag": "Generative AI for Frontend",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Google",
+        "link": "https://ai.google.dev/"
+      },
+      {
+        "course_id": "FE_12_04",
+        "title": "Microsoft Learn: Generative AI",
+        "skill_tag": "Generative AI for Frontend",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Microsoft",
+        "link": "https://learn.microsoft.com/en-us/training/generative-ai/"
+      },
+      {
+        "course_id": "FE_13_01",
+        "title": "GitHub Copilot documentation",
+        "skill_tag": "Implementing AI in Frontend",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "GitHub",
+        "link": "https://docs.github.com/en/copilot"
+      },
+      {
+        "course_id": "FE_13_02",
+        "title": "MDN: AI on the Web",
+        "skill_tag": "Implementing AI in Frontend",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/AI"
+      },
+      {
+        "course_id": "FE_13_03",
+        "title": "Google: AI for Developers",
+        "skill_tag": "Implementing AI in Frontend",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Google",
+        "link": "https://ai.google.dev/"
+      },
+      {
+        "course_id": "FE_13_04",
+        "title": "Microsoft Learn: Generative AI",
+        "skill_tag": "Implementing AI in Frontend",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Microsoft",
+        "link": "https://learn.microsoft.com/en-us/training/generative-ai/"
+      },
+      {
+        "course_id": "FE_14_01",
+        "title": "ESLint Getting Started",
+        "skill_tag": "Linters & formatters",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "ESLint",
+        "link": "https://eslint.org/docs/latest/use/getting-started"
+      },
+      {
+        "course_id": "FE_14_02",
+        "title": "Prettier Docs",
+        "skill_tag": "Linters & formatters",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Prettier",
+        "link": "https://prettier.io/docs/"
+      },
+      {
+        "course_id": "FE_14_03",
+        "title": "Vite Guide",
+        "skill_tag": "Linters & formatters",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Vite",
+        "link": "https://vite.dev/guide/"
+      },
+      {
+        "course_id": "FE_14_04",
+        "title": "webpack Guides",
+        "skill_tag": "Linters & formatters",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "webpack",
+        "link": "https://webpack.js.org/guides/"
+      },
+      {
+        "course_id": "FE_15_01",
+        "title": "ESLint Getting Started",
+        "skill_tag": "Module Bundlers",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "ESLint",
+        "link": "https://eslint.org/docs/latest/use/getting-started"
+      },
+      {
+        "course_id": "FE_15_02",
+        "title": "Prettier Docs",
+        "skill_tag": "Module Bundlers",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Prettier",
+        "link": "https://prettier.io/docs/"
+      },
+      {
+        "course_id": "FE_15_03",
+        "title": "Vite Guide",
+        "skill_tag": "Module Bundlers",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Vite",
+        "link": "https://vite.dev/guide/"
+      },
+      {
+        "course_id": "FE_15_04",
+        "title": "webpack Guides",
+        "skill_tag": "Module Bundlers",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "webpack",
+        "link": "https://webpack.js.org/guides/"
+      },
+      {
+        "course_id": "FE_16_01",
+        "title": "MDN: HTTP overview",
+        "skill_tag": "REST APIs",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
+      },
+      {
+        "course_id": "FE_16_02",
+        "title": "MDN: Fetch API",
+        "skill_tag": "REST APIs",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+      },
+      {
+        "course_id": "FE_16_03",
+        "title": "REST API Tutorial",
+        "skill_tag": "REST APIs",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "RESTful API",
+        "link": "https://restfulapi.net/"
+      },
+      {
+        "course_id": "FE_16_04",
+        "title": "Postman: Learning Center",
+        "skill_tag": "REST APIs",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Postman",
+        "link": "https://learning.postman.com/docs/getting-started/introduction/"
+      },
+      {
+        "course_id": "FE_17_01",
+        "title": "MDN: HTTP authentication",
+        "skill_tag": "Auth Strategies",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication"
+      },
+      {
+        "course_id": "FE_17_02",
+        "title": "OWASP Authentication Cheat Sheet",
+        "skill_tag": "Auth Strategies",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "OWASP",
+        "link": "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+      },
+      {
+        "course_id": "FE_17_03",
+        "title": "Auth0 Learn",
+        "skill_tag": "Auth Strategies",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Auth0",
+        "link": "https://auth0.com/docs/get-started"
+      },
+      {
+        "course_id": "FE_17_04",
+        "title": "Clerk Documentation",
+        "skill_tag": "Auth Strategies",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Clerk",
+        "link": "https://clerk.com/docs"
+      },
+      {
+        "course_id": "FE_18_01",
+        "title": "MDN: Testing",
+        "skill_tag": "Testing & Debugging",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing"
+      },
+      {
+        "course_id": "FE_18_02",
+        "title": "Jest Getting Started",
+        "skill_tag": "Testing & Debugging",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Jest",
+        "link": "https://jestjs.io/docs/getting-started"
+      },
+      {
+        "course_id": "FE_18_03",
+        "title": "Vitest Guide",
+        "skill_tag": "Testing & Debugging",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Vitest",
+        "link": "https://vitest.dev/guide/"
+      },
+      {
+        "course_id": "FE_18_04",
+        "title": "Playwright Introduction",
+        "skill_tag": "Testing & Debugging",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Playwright",
+        "link": "https://playwright.dev/docs/intro"
+      },
+      {
+        "course_id": "FE_19_01",
+        "title": "MDN: HTTP overview",
+        "skill_tag": "Browser Web APIs",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
+      },
+      {
+        "course_id": "FE_19_02",
+        "title": "MDN: Fetch API",
+        "skill_tag": "Browser Web APIs",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+      },
+      {
+        "course_id": "FE_19_03",
+        "title": "REST API Tutorial",
+        "skill_tag": "Browser Web APIs",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "RESTful API",
+        "link": "https://restfulapi.net/"
+      },
+      {
+        "course_id": "FE_19_04",
+        "title": "Postman: Learning Center",
+        "skill_tag": "Browser Web APIs",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Postman",
+        "link": "https://learning.postman.com/docs/getting-started/introduction/"
+      },
+      {
+        "course_id": "FE_20_01",
+        "title": "MDN: Web security",
+        "skill_tag": "Web Security",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Security"
+      },
+      {
+        "course_id": "FE_20_02",
+        "title": "OWASP Top 10",
+        "skill_tag": "Web Security",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "OWASP",
+        "link": "https://owasp.org/www-project-top-ten/"
+      },
+      {
+        "course_id": "FE_20_03",
+        "title": "OWASP Web Security Testing Guide",
+        "skill_tag": "Web Security",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "OWASP",
+        "link": "https://owasp.org/www-project-web-security-testing-guide/"
+      },
+      {
+        "course_id": "FE_20_04",
+        "title": "web.dev: Learn Privacy",
+        "skill_tag": "Web Security",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/privacy/"
+      },
+      {
+        "course_id": "FE_21_01",
+        "title": "Next.js Learn",
+        "skill_tag": "Server-Side Rendering",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Next.js",
+        "link": "https://nextjs.org/learn"
+      },
+      {
+        "course_id": "FE_21_02",
+        "title": "Next.js Rendering",
+        "skill_tag": "Server-Side Rendering",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Next.js",
+        "link": "https://nextjs.org/docs/app/building-your-application/rendering"
+      },
+      {
+        "course_id": "FE_21_03",
+        "title": "Nuxt Introduction",
+        "skill_tag": "Server-Side Rendering",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Nuxt",
+        "link": "https://nuxt.com/docs/getting-started/introduction"
+      },
+      {
+        "course_id": "FE_21_04",
+        "title": "Astro Tutorial",
+        "skill_tag": "Server-Side Rendering",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Astro",
+        "link": "https://docs.astro.build/en/tutorial/0-introduction/"
+      },
+      {
+        "course_id": "FE_22_01",
+        "title": "Astro Tutorial",
+        "skill_tag": "Static Site Generators",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Astro",
+        "link": "https://docs.astro.build/en/tutorial/0-introduction/"
+      },
+      {
+        "course_id": "FE_22_02",
+        "title": "Eleventy Documentation",
+        "skill_tag": "Static Site Generators",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Eleventy",
+        "link": "https://www.11ty.dev/docs/"
+      },
+      {
+        "course_id": "FE_22_03",
+        "title": "Hugo Quick Start",
+        "skill_tag": "Static Site Generators",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Hugo",
+        "link": "https://gohugo.io/getting-started/quick-start/"
+      },
+      {
+        "course_id": "FE_22_04",
+        "title": "Jekyll Quickstart",
+        "skill_tag": "Static Site Generators",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Jekyll",
+        "link": "https://jekyllrb.com/docs/"
+      },
+      {
+        "course_id": "FE_23_01",
+        "title": "TypeScript Handbook",
+        "skill_tag": "Type Checkers",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "TypeScript",
+        "link": "https://www.typescriptlang.org/docs/handbook/intro.html"
+      },
+      {
+        "course_id": "FE_23_02",
+        "title": "TypeScript for JavaScript Programmers",
+        "skill_tag": "Type Checkers",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "TypeScript",
+        "link": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+      },
+      {
+        "course_id": "FE_23_03",
+        "title": "Flow Documentation",
+        "skill_tag": "Type Checkers",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Flow",
+        "link": "https://flow.org/en/docs/"
+      },
+      {
+        "course_id": "FE_23_04",
+        "title": "TypeScript Playground",
+        "skill_tag": "Type Checkers",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "TypeScript",
+        "link": "https://www.typescriptlang.org/play/"
+      },
+      {
+        "course_id": "FE_24_01",
+        "title": "Vercel: Getting Started",
+        "skill_tag": "Deployment",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Vercel",
+        "link": "https://vercel.com/docs/getting-started-with-vercel"
+      },
+      {
+        "course_id": "FE_24_02",
+        "title": "Netlify: Get started",
+        "skill_tag": "Deployment",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Netlify",
+        "link": "https://docs.netlify.com/get-started/"
+      },
+      {
+        "course_id": "FE_24_03",
+        "title": "GitHub Pages: Quickstart",
+        "skill_tag": "Deployment",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "GitHub",
+        "link": "https://docs.github.com/en/pages/quickstart"
+      },
+      {
+        "course_id": "FE_24_04",
+        "title": "MDN: Publishing your website",
+        "skill_tag": "Deployment",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website"
+      },
+      {
+        "course_id": "FE_25_01",
+        "title": "Material Design",
+        "skill_tag": "Design Systems",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Google",
+        "link": "https://m3.material.io/"
+      },
+      {
+        "course_id": "FE_25_02",
+        "title": "IBM Carbon Design System",
+        "skill_tag": "Design Systems",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "IBM",
+        "link": "https://carbondesignsystem.com/"
+      },
+      {
+        "course_id": "FE_25_03",
+        "title": "Atlassian Design System",
+        "skill_tag": "Design Systems",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Atlassian",
+        "link": "https://atlassian.design/"
+      },
+      {
+        "course_id": "FE_25_04",
+        "title": "Shopify Polaris",
+        "skill_tag": "Design Systems",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Shopify",
+        "link": "https://polaris.shopify.com/"
+      },
+      {
+        "course_id": "FE_26_01",
+        "title": "web.dev: Learn Performance",
+        "skill_tag": "Performance",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/performance/"
+      },
+      {
+        "course_id": "FE_26_02",
+        "title": "MDN: Web performance",
+        "skill_tag": "Performance",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Performance"
+      },
+      {
+        "course_id": "FE_26_03",
+        "title": "web.dev: Optimize resource loading",
+        "skill_tag": "Performance",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/performance/optimize-resource-loading/"
+      },
+      {
+        "course_id": "FE_26_04",
+        "title": "Chrome DevTools Performance",
+        "skill_tag": "Performance",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Chrome",
+        "link": "https://developer.chrome.com/docs/devtools/performance"
+      },
+      {
+        "course_id": "FE_27_01",
+        "title": "MDN: Web Components",
+        "skill_tag": "Web Components",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
+      },
+      {
+        "course_id": "FE_27_02",
+        "title": "web.dev: Custom elements",
+        "skill_tag": "Web Components",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "web.dev",
+        "link": "https://web.dev/articles/custom-elements-v1"
+      },
+      {
+        "course_id": "FE_27_03",
+        "title": "MDN: CustomElementRegistry",
+        "skill_tag": "Web Components",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry"
+      },
+      {
+        "course_id": "FE_27_04",
+        "title": "web.dev: Shadow DOM",
+        "skill_tag": "Web Components",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "web.dev",
+        "link": "https://web.dev/articles/shadowdom-v1"
+      },
+      {
+        "course_id": "FE_28_01",
+        "title": "GraphQL Learn",
+        "skill_tag": "GraphQL",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "GraphQL",
+        "link": "https://graphql.org/learn/"
+      },
+      {
+        "course_id": "FE_28_02",
+        "title": "Apollo GraphQL Tutorials",
+        "skill_tag": "GraphQL",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Apollo",
+        "link": "https://www.apollographql.com/tutorials/"
+      },
+      {
+        "course_id": "FE_28_03",
+        "title": "GraphQL.js Learn",
+        "skill_tag": "GraphQL",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "GraphQL.js",
+        "link": "https://www.graphql-js.org/docs/"
+      },
+      {
+        "course_id": "FE_28_04",
+        "title": "How to GraphQL",
+        "skill_tag": "GraphQL",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "How to GraphQL",
+        "link": "https://www.howtographql.com/"
+      },
+      {
+        "course_id": "FE_29_01",
+        "title": "MDN: Accessibility",
+        "skill_tag": "Accessibility",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility"
+      },
+      {
+        "course_id": "FE_29_02",
+        "title": "WAI Tutorials",
+        "skill_tag": "Accessibility",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "W3C WAI",
+        "link": "https://www.w3.org/WAI/tutorials/"
+      },
+      {
+        "course_id": "FE_29_03",
+        "title": "web.dev: Learn Accessibility",
+        "skill_tag": "Accessibility",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/accessibility/"
+      },
+      {
+        "course_id": "FE_29_04",
+        "title": "Deque University",
+        "skill_tag": "Accessibility",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Deque",
+        "link": "https://dequeuniversity.com/resources/"
+      },
+      {
+        "course_id": "FE_30_01",
+        "title": "MDN: Progressive web apps",
+        "skill_tag": "Progressive Web Apps",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
+      },
+      {
+        "course_id": "FE_30_02",
+        "title": "web.dev: Learn PWA",
+        "skill_tag": "Progressive Web Apps",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/pwa/"
+      },
+      {
+        "course_id": "FE_30_03",
+        "title": "web.dev: PWA training",
+        "skill_tag": "Progressive Web Apps",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/pwa/"
+      },
+      {
+        "course_id": "FE_30_04",
+        "title": "Workbox Documentation",
+        "skill_tag": "Progressive Web Apps",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Google",
+        "link": "https://developer.chrome.com/docs/workbox/"
+      },
+      {
+        "course_id": "FE_31_01",
+        "title": "React Native Getting Started",
+        "skill_tag": "Mobile Apps",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "React Native",
+        "link": "https://reactnative.dev/docs/getting-started"
+      },
+      {
+        "course_id": "FE_31_02",
+        "title": "Flutter Codelabs",
+        "skill_tag": "Mobile Apps",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Flutter",
+        "link": "https://docs.flutter.dev/codelabs"
+      },
+      {
+        "course_id": "FE_31_03",
+        "title": "Expo Tutorial",
+        "skill_tag": "Mobile Apps",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Expo",
+        "link": "https://docs.expo.dev/tutorial/introduction/"
+      },
+      {
+        "course_id": "FE_31_04",
+        "title": "Ionic React Quickstart",
+        "skill_tag": "Mobile Apps",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Ionic",
+        "link": "https://ionicframework.com/docs/react/quickstart"
+      },
+      {
+        "course_id": "FE_32_01",
+        "title": "Electron Quick Start",
+        "skill_tag": "Desktop Applications in JavaScript",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Electron",
+        "link": "https://www.electronjs.org/docs/latest/tutorial/quick-start"
+      },
+      {
+        "course_id": "FE_32_02",
+        "title": "Tauri Getting Started",
+        "skill_tag": "Desktop Applications in JavaScript",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Tauri",
+        "link": "https://tauri.app/start/"
+      },
+      {
+        "course_id": "FE_32_03",
+        "title": "NW.js Getting Started",
+        "skill_tag": "Desktop Applications in JavaScript",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "NW.js",
+        "link": "https://nwjs.readthedocs.io/en/latest/For%20Users/Getting%20Started/"
+      },
+      {
+        "course_id": "FE_32_04",
+        "title": "Electron Forge Tutorial",
+        "skill_tag": "Desktop Applications in JavaScript",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Electron Forge",
+        "link": "https://www.electronforge.io/"
+      },
+      {
+        "course_id": "BE_01_01",
+        "title": "MDN: Server-side website programming",
+        "skill_tag": "Internet Fundamentals",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side"
+      },
+      {
+        "course_id": "BE_01_02",
+        "title": "Full Stack Open",
+        "skill_tag": "Internet Fundamentals",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "University of Helsinki",
+        "link": "https://fullstackopen.com/en/"
+      },
+      {
+        "course_id": "BE_01_03",
+        "title": "roadmap.sh Backend",
+        "skill_tag": "Internet Fundamentals",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "roadmap.sh",
+        "link": "https://roadmap.sh/backend"
+      },
+      {
+        "course_id": "BE_01_04",
+        "title": "freeCodeCamp: Back End Development",
+        "skill_tag": "Internet Fundamentals",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/back-end-development-and-apis/"
+      },
+      {
+        "course_id": "BE_02_01",
+        "title": "MDN: Server-side website programming",
+        "skill_tag": "Introduction to Backend Development",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side"
+      },
+      {
+        "course_id": "BE_02_02",
+        "title": "Full Stack Open",
+        "skill_tag": "Introduction to Backend Development",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "University of Helsinki",
+        "link": "https://fullstackopen.com/en/"
+      },
+      {
+        "course_id": "BE_02_03",
+        "title": "roadmap.sh Backend",
+        "skill_tag": "Introduction to Backend Development",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "roadmap.sh",
+        "link": "https://roadmap.sh/backend"
+      },
+      {
+        "course_id": "BE_02_04",
+        "title": "freeCodeCamp: Back End Development",
+        "skill_tag": "Introduction to Backend Development",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/back-end-development-and-apis/"
+      },
+      {
+        "course_id": "BE_03_01",
+        "title": "MDN: Structuring content with HTML",
+        "skill_tag": "HTML Fundamentals",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
+      },
+      {
+        "course_id": "BE_03_02",
+        "title": "MDN: Introduction to HTML",
+        "skill_tag": "HTML Fundamentals",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
+      },
+      {
+        "course_id": "BE_03_03",
+        "title": "freeCodeCamp: Responsive Web Design",
+        "skill_tag": "HTML Fundamentals",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+      },
+      {
+        "course_id": "BE_03_04",
+        "title": "web.dev: Learn HTML",
+        "skill_tag": "HTML Fundamentals",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/html/"
+      },
+      {
+        "course_id": "BE_04_01",
+        "title": "MDN: CSS styling basics",
+        "skill_tag": "CSS Fundamentals",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics"
+      },
+      {
+        "course_id": "BE_04_02",
+        "title": "MDN: CSS layout",
+        "skill_tag": "CSS Fundamentals",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout"
+      },
+      {
+        "course_id": "BE_04_03",
+        "title": "web.dev: Learn CSS",
+        "skill_tag": "CSS Fundamentals",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "web.dev",
+        "link": "https://web.dev/learn/css/"
+      },
+      {
+        "course_id": "BE_04_04",
+        "title": "freeCodeCamp: Responsive Web Design",
+        "skill_tag": "CSS Fundamentals",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+      },
+      {
+        "course_id": "BE_05_01",
+        "title": "MDN: JavaScript Guide",
+        "skill_tag": "JavaScript Foundations",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+      },
+      {
+        "course_id": "BE_05_02",
+        "title": "MDN: Dynamic scripting with JavaScript",
+        "skill_tag": "JavaScript Foundations",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting"
+      },
+      {
+        "course_id": "BE_05_03",
+        "title": "javascript.info",
+        "skill_tag": "JavaScript Foundations",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "javascript.info",
+        "link": "https://javascript.info/"
+      },
+      {
+        "course_id": "BE_05_04",
+        "title": "freeCodeCamp: JavaScript Algorithms and Data Structures",
+        "skill_tag": "JavaScript Foundations",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/"
+      },
+      {
+        "course_id": "BE_06_01",
+        "title": "MDN: Server-side website programming",
+        "skill_tag": "Frontend Basics",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side"
+      },
+      {
+        "course_id": "BE_06_02",
+        "title": "Full Stack Open",
+        "skill_tag": "Frontend Basics",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "University of Helsinki",
+        "link": "https://fullstackopen.com/en/"
+      },
+      {
+        "course_id": "BE_06_03",
+        "title": "roadmap.sh Backend",
+        "skill_tag": "Frontend Basics",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "roadmap.sh",
+        "link": "https://roadmap.sh/backend"
+      },
+      {
+        "course_id": "BE_06_04",
+        "title": "freeCodeCamp: Back End Development",
+        "skill_tag": "Frontend Basics",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/back-end-development-and-apis/"
+      },
+      {
+        "course_id": "BE_07_01",
+        "title": "Node.js Learn",
+        "skill_tag": "Node.js Basics",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Node.js",
+        "link": "https://nodejs.org/en/learn"
+      },
+      {
+        "course_id": "BE_07_02",
+        "title": "Node.js Introduction",
+        "skill_tag": "Node.js Basics",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Node.js",
+        "link": "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs"
+      },
+      {
+        "course_id": "BE_07_03",
+        "title": "Full Stack Open Part 3",
+        "skill_tag": "Node.js Basics",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "University of Helsinki",
+        "link": "https://fullstackopen.com/en/part3"
+      },
+      {
+        "course_id": "BE_07_04",
+        "title": "freeCodeCamp: Back End Development and APIs",
+        "skill_tag": "Node.js Basics",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/back-end-development-and-apis/"
+      },
+      {
+        "course_id": "BE_08_01",
+        "title": "Express: Installing",
+        "skill_tag": "Express.js (Web Framework)",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Express",
+        "link": "https://expressjs.com/en/starter/installing.html"
+      },
+      {
+        "course_id": "BE_08_02",
+        "title": "Express: Hello World",
+        "skill_tag": "Express.js (Web Framework)",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Express",
+        "link": "https://expressjs.com/en/starter/hello-world.html"
+      },
+      {
+        "course_id": "BE_08_03",
+        "title": "Express: Routing",
+        "skill_tag": "Express.js (Web Framework)",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Express",
+        "link": "https://expressjs.com/en/guide/routing.html"
+      },
+      {
+        "course_id": "BE_08_04",
+        "title": "MDN: Express/Node tutorial",
+        "skill_tag": "Express.js (Web Framework)",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs"
+      },
+      {
+        "course_id": "BE_09_01",
+        "title": "MDN: HTTP overview",
+        "skill_tag": "REST APIs in Node",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
+      },
+      {
+        "course_id": "BE_09_02",
+        "title": "MDN: Fetch API",
+        "skill_tag": "REST APIs in Node",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+      },
+      {
+        "course_id": "BE_09_03",
+        "title": "REST API Tutorial",
+        "skill_tag": "REST APIs in Node",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "RESTful API",
+        "link": "https://restfulapi.net/"
+      },
+      {
+        "course_id": "BE_09_04",
+        "title": "Postman: Learning Center",
+        "skill_tag": "REST APIs in Node",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Postman",
+        "link": "https://learning.postman.com/docs/getting-started/introduction/"
+      },
+      {
+        "course_id": "BE_10_01",
+        "title": "MDN: Testing",
+        "skill_tag": "Testing (Node.js)",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing"
+      },
+      {
+        "course_id": "BE_10_02",
+        "title": "Jest Getting Started",
+        "skill_tag": "Testing (Node.js)",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Jest",
+        "link": "https://jestjs.io/docs/getting-started"
+      },
+      {
+        "course_id": "BE_10_03",
+        "title": "Vitest Guide",
+        "skill_tag": "Testing (Node.js)",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Vitest",
+        "link": "https://vitest.dev/guide/"
+      },
+      {
+        "course_id": "BE_10_04",
+        "title": "Playwright Introduction",
+        "skill_tag": "Testing (Node.js)",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Playwright",
+        "link": "https://playwright.dev/docs/intro"
+      },
+      {
+        "course_id": "BE_11_01",
+        "title": "Python Tutorial",
+        "skill_tag": "Python Basics",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Python.org",
+        "link": "https://docs.python.org/3/tutorial/"
+      },
+      {
+        "course_id": "BE_11_02",
+        "title": "Python Beginner's Guide",
+        "skill_tag": "Python Basics",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Python.org",
+        "link": "https://wiki.python.org/moin/BeginnersGuide"
+      },
+      {
+        "course_id": "BE_11_03",
+        "title": "Real Python Tutorials",
+        "skill_tag": "Python Basics",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Real Python",
+        "link": "https://realpython.com/"
+      },
+      {
+        "course_id": "BE_11_04",
+        "title": "freeCodeCamp: Scientific Computing with Python",
+        "skill_tag": "Python Basics",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "freeCodeCamp",
+        "link": "https://www.freecodecamp.org/learn/scientific-computing-with-python/"
+      },
+      {
+        "course_id": "BE_12_01",
+        "title": "Django Tutorial",
+        "skill_tag": "Django or Flask (Web Framework)",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Django",
+        "link": "https://docs.djangoproject.com/en/stable/intro/tutorial01/"
+      },
+      {
+        "course_id": "BE_12_02",
+        "title": "MDN: Django tutorial",
+        "skill_tag": "Django or Flask (Web Framework)",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django"
+      },
+      {
+        "course_id": "BE_12_03",
+        "title": "Django Girls Tutorial",
+        "skill_tag": "Django or Flask (Web Framework)",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Django Girls",
+        "link": "https://tutorial.djangogirls.org/en/"
+      },
+      {
+        "course_id": "BE_12_04",
+        "title": "Django Documentation",
+        "skill_tag": "Django or Flask (Web Framework)",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Django",
+        "link": "https://docs.djangoproject.com/en/stable/"
+      },
+      {
+        "course_id": "BE_13_01",
+        "title": "MDN: HTTP overview",
+        "skill_tag": "REST APIs in Python",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview"
+      },
+      {
+        "course_id": "BE_13_02",
+        "title": "MDN: Fetch API",
+        "skill_tag": "REST APIs in Python",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+      },
+      {
+        "course_id": "BE_13_03",
+        "title": "REST API Tutorial",
+        "skill_tag": "REST APIs in Python",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "RESTful API",
+        "link": "https://restfulapi.net/"
+      },
+      {
+        "course_id": "BE_13_04",
+        "title": "Postman: Learning Center",
+        "skill_tag": "REST APIs in Python",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Postman",
+        "link": "https://learning.postman.com/docs/getting-started/introduction/"
+      },
+      {
+        "course_id": "BE_14_01",
+        "title": "MDN: Testing",
+        "skill_tag": "Testing (Python)",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Testing"
+      },
+      {
+        "course_id": "BE_14_02",
+        "title": "Jest Getting Started",
+        "skill_tag": "Testing (Python)",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Jest",
+        "link": "https://jestjs.io/docs/getting-started"
+      },
+      {
+        "course_id": "BE_14_03",
+        "title": "Vitest Guide",
+        "skill_tag": "Testing (Python)",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Vitest",
+        "link": "https://vitest.dev/guide/"
+      },
+      {
+        "course_id": "BE_14_04",
+        "title": "Playwright Introduction",
+        "skill_tag": "Testing (Python)",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Playwright",
+        "link": "https://playwright.dev/docs/intro"
+      },
+      {
+        "course_id": "BE_15_01",
+        "title": "SQLBolt",
+        "skill_tag": "Databases (SQL)",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "SQLBolt",
+        "link": "https://sqlbolt.com/"
+      },
+      {
+        "course_id": "BE_15_02",
+        "title": "PostgreSQL Tutorial",
+        "skill_tag": "Databases (SQL)",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "PostgreSQL",
+        "link": "https://www.postgresql.org/docs/current/tutorial.html"
+      },
+      {
+        "course_id": "BE_15_03",
+        "title": "SQLZoo",
+        "skill_tag": "Databases (SQL)",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "SQLZoo",
+        "link": "https://sqlzoo.net/wiki/SQL_Tutorial"
+      },
+      {
+        "course_id": "BE_15_04",
+        "title": "W3Schools SQL Tutorial",
+        "skill_tag": "Databases (SQL)",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "W3Schools",
+        "link": "https://www.w3schools.com/sql/"
+      },
+      {
+        "course_id": "BE_16_01",
+        "title": "MongoDB University",
+        "skill_tag": "NoSQL Databases",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MongoDB",
+        "link": "https://learn.mongodb.com/"
+      },
+      {
+        "course_id": "BE_16_02",
+        "title": "MongoDB Manual",
+        "skill_tag": "NoSQL Databases",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MongoDB",
+        "link": "https://www.mongodb.com/docs/manual/"
+      },
+      {
+        "course_id": "BE_16_03",
+        "title": "Redis University",
+        "skill_tag": "NoSQL Databases",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Redis",
+        "link": "https://university.redis.io/"
+      },
+      {
+        "course_id": "BE_16_04",
+        "title": "Firebase Firestore Documentation",
+        "skill_tag": "NoSQL Databases",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Firebase",
+        "link": "https://firebase.google.com/docs/firestore"
+      },
+      {
+        "course_id": "BE_17_01",
+        "title": "MDN: Server-side website programming",
+        "skill_tag": "Learn about Web Servers",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side"
+      },
+      {
+        "course_id": "BE_17_02",
+        "title": "NGINX Beginner's Guide",
+        "skill_tag": "Learn about Web Servers",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "NGINX",
+        "link": "https://nginx.org/en/docs/beginners_guide.html"
+      },
+      {
+        "course_id": "BE_17_03",
+        "title": "Apache HTTP Server Tutorial",
+        "skill_tag": "Learn about Web Servers",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Apache",
+        "link": "https://httpd.apache.org/docs/2.4/getting-started.html"
+      },
+      {
+        "course_id": "BE_17_04",
+        "title": "Node.js HTTP documentation",
+        "skill_tag": "Learn about Web Servers",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Node.js",
+        "link": "https://nodejs.org/api/http.html"
+      },
+      {
+        "course_id": "BE_18_01",
+        "title": "GitHub Actions Quickstart",
+        "skill_tag": "CI/CD Basics",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "GitHub",
+        "link": "https://docs.github.com/en/actions/quickstart"
+      },
+      {
+        "course_id": "BE_18_02",
+        "title": "GitLab CI/CD Quick Start",
+        "skill_tag": "CI/CD Basics",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "GitLab",
+        "link": "https://docs.gitlab.com/ee/ci/quick_start/"
+      },
+      {
+        "course_id": "BE_18_03",
+        "title": "Docker: CI/CD",
+        "skill_tag": "CI/CD Basics",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Docker",
+        "link": "https://docs.docker.com/build/ci/"
+      },
+      {
+        "course_id": "BE_18_04",
+        "title": "CircleCI: Getting Started",
+        "skill_tag": "CI/CD Basics",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "CircleCI",
+        "link": "https://circleci.com/docs/getting-started/"
+      },
+      {
+        "course_id": "BE_19_01",
+        "title": "GitHub Copilot documentation",
+        "skill_tag": "AI Assisted Coding",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "GitHub",
+        "link": "https://docs.github.com/en/copilot"
+      },
+      {
+        "course_id": "BE_19_02",
+        "title": "MDN: AI on the Web",
+        "skill_tag": "AI Assisted Coding",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/AI"
+      },
+      {
+        "course_id": "BE_19_03",
+        "title": "Google: AI for Developers",
+        "skill_tag": "AI Assisted Coding",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Google",
+        "link": "https://ai.google.dev/"
+      },
+      {
+        "course_id": "BE_19_04",
+        "title": "Microsoft Learn: Generative AI",
+        "skill_tag": "AI Assisted Coding",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Microsoft",
+        "link": "https://learn.microsoft.com/en-us/training/generative-ai/"
+      },
+      {
+        "course_id": "BE_20_01",
+        "title": "OpenAI API Quickstart",
+        "skill_tag": "Learn the Basics (AI in Backend)",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "OpenAI",
+        "link": "https://platform.openai.com/docs/quickstart"
+      },
+      {
+        "course_id": "BE_20_02",
+        "title": "Google AI for Developers",
+        "skill_tag": "Learn the Basics (AI in Backend)",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Google",
+        "link": "https://ai.google.dev/"
+      },
+      {
+        "course_id": "BE_20_03",
+        "title": "Microsoft Learn: Generative AI",
+        "skill_tag": "Learn the Basics (AI in Backend)",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Microsoft",
+        "link": "https://learn.microsoft.com/en-us/training/generative-ai/"
+      },
+      {
+        "course_id": "BE_20_04",
+        "title": "Hugging Face Course",
+        "skill_tag": "Learn the Basics (AI in Backend)",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Hugging Face",
+        "link": "https://huggingface.co/learn/nlp-course/chapter1/1"
+      },
+      {
+        "course_id": "BE_21_01",
+        "title": "OpenAI API Quickstart",
+        "skill_tag": "AI Applications in Software Development",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "OpenAI",
+        "link": "https://platform.openai.com/docs/quickstart"
+      },
+      {
+        "course_id": "BE_21_02",
+        "title": "Google AI for Developers",
+        "skill_tag": "AI Applications in Software Development",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Google",
+        "link": "https://ai.google.dev/"
+      },
+      {
+        "course_id": "BE_21_03",
+        "title": "Microsoft Learn: Generative AI",
+        "skill_tag": "AI Applications in Software Development",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Microsoft",
+        "link": "https://learn.microsoft.com/en-us/training/generative-ai/"
+      },
+      {
+        "course_id": "BE_21_04",
+        "title": "Hugging Face Course",
+        "skill_tag": "AI Applications in Software Development",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Hugging Face",
+        "link": "https://huggingface.co/learn/nlp-course/chapter1/1"
+      },
+      {
+        "course_id": "BE_22_01",
+        "title": "OpenAI API Quickstart",
+        "skill_tag": "Integration Patterns (For AI)",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "OpenAI",
+        "link": "https://platform.openai.com/docs/quickstart"
+      },
+      {
+        "course_id": "BE_22_02",
+        "title": "Google AI for Developers",
+        "skill_tag": "Integration Patterns (For AI)",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Google",
+        "link": "https://ai.google.dev/"
+      },
+      {
+        "course_id": "BE_22_03",
+        "title": "Microsoft Learn: Generative AI",
+        "skill_tag": "Integration Patterns (For AI)",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Microsoft",
+        "link": "https://learn.microsoft.com/en-us/training/generative-ai/"
+      },
+      {
+        "course_id": "BE_22_04",
+        "title": "Hugging Face Course",
+        "skill_tag": "Integration Patterns (For AI)",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Hugging Face",
+        "link": "https://huggingface.co/learn/nlp-course/chapter1/1"
+      },
+      {
+        "course_id": "BE_23_01",
+        "title": "Redis University",
+        "skill_tag": "Caching",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Redis",
+        "link": "https://university.redis.io/"
+      },
+      {
+        "course_id": "BE_23_02",
+        "title": "Redis Documentation",
+        "skill_tag": "Caching",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Redis",
+        "link": "https://redis.io/docs/latest/"
+      },
+      {
+        "course_id": "BE_23_03",
+        "title": "MDN: HTTP caching",
+        "skill_tag": "Caching",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching"
+      },
+      {
+        "course_id": "BE_23_04",
+        "title": "web.dev: Browser caching",
+        "skill_tag": "Caching",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "web.dev",
+        "link": "https://web.dev/articles/http-cache"
+      },
+      {
+        "course_id": "BE_24_01",
+        "title": "Elasticsearch: Getting started",
+        "skill_tag": "Search Engines",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Elastic",
+        "link": "https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html"
+      },
+      {
+        "course_id": "BE_24_02",
+        "title": "OpenSearch Getting Started",
+        "skill_tag": "Search Engines",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "OpenSearch",
+        "link": "https://opensearch.org/docs/latest/getting-started/"
+      },
+      {
+        "course_id": "BE_24_03",
+        "title": "Algolia Documentation",
+        "skill_tag": "Search Engines",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Algolia",
+        "link": "https://www.algolia.com/doc/guides/getting-started/"
+      },
+      {
+        "course_id": "BE_24_04",
+        "title": "Meilisearch Getting Started",
+        "skill_tag": "Search Engines",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Meilisearch",
+        "link": "https://www.meilisearch.com/docs/learn/getting_started/overview"
+      },
+      {
+        "course_id": "BE_25_01",
+        "title": "Socket.IO Get Started",
+        "skill_tag": "Real Time Data",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Socket.IO",
+        "link": "https://socket.io/get-started/chat"
+      },
+      {
+        "course_id": "BE_25_02",
+        "title": "MDN: WebSocket API",
+        "skill_tag": "Real Time Data",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MDN",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+      },
+      {
+        "course_id": "BE_25_03",
+        "title": "Firebase Realtime Database",
+        "skill_tag": "Real Time Data",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Firebase",
+        "link": "https://firebase.google.com/docs/database"
+      },
+      {
+        "course_id": "BE_25_04",
+        "title": "Ably Pub/Sub Basics",
+        "skill_tag": "Real Time Data",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Ably",
+        "link": "https://ably.com/docs/getting-started"
+      },
+      {
+        "course_id": "BE_26_01",
+        "title": "RabbitMQ Tutorials",
+        "skill_tag": "Message Brokers",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "RabbitMQ",
+        "link": "https://www.rabbitmq.com/tutorials"
+      },
+      {
+        "course_id": "BE_26_02",
+        "title": "Apache Kafka Quickstart",
+        "skill_tag": "Message Brokers",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Apache Kafka",
+        "link": "https://kafka.apache.org/quickstart"
+      },
+      {
+        "course_id": "BE_26_03",
+        "title": "Redis Pub/Sub",
+        "skill_tag": "Message Brokers",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Redis",
+        "link": "https://redis.io/docs/latest/develop/interact/pubsub/"
+      },
+      {
+        "course_id": "BE_26_04",
+        "title": "NATS by Example",
+        "skill_tag": "Message Brokers",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "NATS",
+        "link": "https://natsbyexample.com/"
+      },
+      {
+        "course_id": "BE_27_01",
+        "title": "PostgreSQL High Availability",
+        "skill_tag": "Scaling Databases",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "PostgreSQL",
+        "link": "https://www.postgresql.org/docs/current/high-availability.html"
+      },
+      {
+        "course_id": "BE_27_02",
+        "title": "MongoDB Scaling",
+        "skill_tag": "Scaling Databases",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "MongoDB",
+        "link": "https://www.mongodb.com/docs/manual/sharding/"
+      },
+      {
+        "course_id": "BE_27_03",
+        "title": "Redis Scaling",
+        "skill_tag": "Scaling Databases",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Redis",
+        "link": "https://redis.io/docs/latest/operate/oss_and_stack/management/scaling/"
+      },
+      {
+        "course_id": "BE_27_04",
+        "title": "AWS Well-Architected Framework",
+        "skill_tag": "Scaling Databases",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "AWS",
+        "link": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html"
+      },
+      {
+        "course_id": "BE_28_01",
+        "title": "Martin Fowler: Software Architecture",
+        "skill_tag": "Architectural Patterns",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "Martin Fowler",
+        "link": "https://martinfowler.com/architecture/"
+      },
+      {
+        "course_id": "BE_28_02",
+        "title": "AWS Architecture Center",
+        "skill_tag": "Architectural Patterns",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "AWS",
+        "link": "https://aws.amazon.com/architecture/"
+      },
+      {
+        "course_id": "BE_28_03",
+        "title": "Microsoft Architecture Center",
+        "skill_tag": "Architectural Patterns",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Microsoft",
+        "link": "https://learn.microsoft.com/en-us/azure/architecture/"
+      },
+      {
+        "course_id": "BE_28_04",
+        "title": "Google Cloud Architecture Framework",
+        "skill_tag": "Architectural Patterns",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "Google Cloud",
+        "link": "https://cloud.google.com/architecture/framework"
+      },
+      {
+        "course_id": "BE_29_01",
+        "title": "AWS Well-Architected Framework",
+        "skill_tag": "Building for Scale",
+        "level": "Beginner",
+        "duration_hours": 3,
+        "platform": "AWS",
+        "link": "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html"
+      },
+      {
+        "course_id": "BE_29_02",
+        "title": "Google Cloud Architecture Framework",
+        "skill_tag": "Building for Scale",
+        "level": "Easy",
+        "duration_hours": 6,
+        "platform": "Google Cloud",
+        "link": "https://cloud.google.com/architecture/framework"
+      },
+      {
+        "course_id": "BE_29_03",
+        "title": "Microsoft Azure Architecture Center",
+        "skill_tag": "Building for Scale",
+        "level": "Medium",
+        "duration_hours": 10,
+        "platform": "Microsoft",
+        "link": "https://learn.microsoft.com/en-us/azure/architecture/"
+      },
+      {
+        "course_id": "BE_29_04",
+        "title": "Designing Data-Intensive Applications resources",
+        "skill_tag": "Building for Scale",
+        "level": "High",
+        "duration_hours": 15,
+        "platform": "O'Reilly",
+        "link": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/"
+      }
+    ]
+  },
+  "README": {
+    "total_rows": 7,
+    "data_rows_count": 6,
+    "headers": [
+      "Check",
+      "Result"
+    ],
+    "sample_rows": [
+      {
+        "Check": "Source of truth",
+        "Result": "Exact finalized JSON supplied by user"
+      },
+      {
+        "Check": "Skills",
+        "Result": "61 actual skills (32 Frontend + 29 Backend)"
+      },
+      {
+        "Check": "Rows",
+        "Result": "244 (61 \u00d7 4)"
+      },
+      {
+        "Check": "Levels per skill",
+        "Result": "Beginner, Easy, Medium, High"
+      },
+      {
+        "Check": "Search-result links",
+        "Result": "None used; links point to specific learning resources/tutorial/course pages"
+      }
+    ],
+    "all_rows": [
+      {
+        "Check": "Source of truth",
+        "Result": "Exact finalized JSON supplied by user"
+      },
+      {
+        "Check": "Skills",
+        "Result": "61 actual skills (32 Frontend + 29 Backend)"
+      },
+      {
+        "Check": "Rows",
+        "Result": "244 (61 \u00d7 4)"
+      },
+      {
+        "Check": "Levels per skill",
+        "Result": "Beginner, Easy, Medium, High"
+      },
+      {
+        "Check": "Search-result links",
+        "Result": "None used; links point to specific learning resources/tutorial/course pages"
+      },
+      {
+        "Check": "Duration",
+        "Result": "Estimated learning time; not provider-certified"
+      }
+    ]
+  }
+}

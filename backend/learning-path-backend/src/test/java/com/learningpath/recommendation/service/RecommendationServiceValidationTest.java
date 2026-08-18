@@ -22,6 +22,10 @@ import com.learningpath.recommendation.dto.SkillGapAnalysisResponse;
 import com.learningpath.recommendation.dto.SkillGapItemResponse;
 import com.learningpath.repository.CourseSkillRepository;
 import com.learningpath.repository.UserRepository;
+import com.learningpath.ai.reasoning.service.GeminiReasoningService;
+import com.learningpath.repository.CourseRepository;
+import com.learningpath.skilldependency.dto.LearningOrderResponse;
+import com.learningpath.skilldependency.service.SkillDependencyService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -52,7 +56,16 @@ class RecommendationServiceValidationTest {
     private CourseSkillRepository courseSkillRepository;
 
     @Mock
+    private CourseRepository courseRepository;
+
+    @Mock
     private MlRecommendationClient mlRecommendationClient;
+
+    @Mock
+    private GeminiReasoningService geminiReasoningService;
+
+    @Mock
+    private SkillDependencyService skillDependencyService;
 
     @InjectMocks
     private RecommendationService recommendationService;
@@ -79,6 +92,8 @@ class RecommendationServiceValidationTest {
                 .title("Java Backend Developer")
                 .build();
         career.setId(careerId);
+
+        when(skillDependencyService.getLearningOrder(any())).thenReturn(LearningOrderResponse.ok(Collections.emptyList(), Collections.emptyList()));
     }
 
     @Test

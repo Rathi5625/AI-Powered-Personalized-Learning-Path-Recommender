@@ -3,11 +3,13 @@ package com.learningpath.entity;
 import com.learningpath.entity.enums.ExperienceLevel;
 import com.learningpath.entity.enums.LearningStyle;
 import com.learningpath.entity.enums.PreferredContentType;
+import com.learningpath.entity.enums.UserRole;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Index;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,6 +40,11 @@ public class User extends BaseEntity {
     @Column(name = "password_hash", length = 255)
     private String passwordHash;
 
+    @Builder.Default
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role", nullable = false, length = 20)
+    private UserRole role = UserRole.USER;
+
     @Column(name = "target_career", length = 100)
     private String targetCareer;
 
@@ -55,4 +62,11 @@ public class User extends BaseEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "preferred_content_type", length = 30)
     private PreferredContentType preferredContentType;
+
+    @PrePersist
+    public void ensureRole() {
+        if (this.role == null) {
+            this.role = UserRole.USER;
+        }
+    }
 }

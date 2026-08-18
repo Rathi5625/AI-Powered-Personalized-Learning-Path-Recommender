@@ -107,6 +107,8 @@ public class SkillDependencyService {
         graph.registerAlias("AI Assisted Coding", "AI-Assisted Coding");
         graph.registerAlias("Express.js", "Express.js (Web Framework)");
         graph.registerAlias("Django or Flask", "Django or Flask (Web Framework)");
+        graph.registerAlias("React", "JavaScript Frameworks");
+        graph.registerAlias("JavaScript Frameworks", "React");
     }
 
     public int getDomainCount() {

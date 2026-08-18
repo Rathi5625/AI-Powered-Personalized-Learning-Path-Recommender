@@ -81,6 +81,7 @@ public class UserService {
                 user.getId(),
                 user.getFullName(),
                 user.getEmail(),
+                user.getRole() != null ? user.getRole() : com.learningpath.entity.enums.UserRole.USER,
                 user.getTargetCareer(),
                 user.getExperienceLevel(),
                 user.getDailyLearningHours(),

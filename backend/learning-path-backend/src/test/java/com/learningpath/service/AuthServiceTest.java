@@ -107,7 +107,7 @@ class AuthServiceTest {
 
         when(userRepository.findByEmail("john@example.com")).thenReturn(Optional.of(mockUser));
         when(passwordEncoder.matches("Secret123", "$2a$10$hashedPassword")).thenReturn(true);
-        when(jwtService.generateToken(any(), eq("john@example.com"))).thenReturn("mock.jwt.token");
+        when(jwtService.generateToken(any(), eq("john@example.com"), any())).thenReturn("mock.jwt.token");
         when(jwtService.getExpirationMs()).thenReturn(3600000L);
 
         AuthResponse response = authService.login(request);

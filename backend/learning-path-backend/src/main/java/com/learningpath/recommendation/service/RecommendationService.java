@@ -16,13 +16,23 @@ import com.learningpath.recommendation.dto.SkillGapItemResponse;
 import com.learningpath.recommendation.engine.RecommendationScoringEngine;
 import com.learningpath.repository.CourseSkillRepository;
 import com.learningpath.repository.UserRepository;
+import com.learningpath.ai.reasoning.dto.CandidateCourseDto;
+import com.learningpath.ai.reasoning.dto.GeminiCourseExplanationDto;
+import com.learningpath.ai.reasoning.dto.GeminiReasoningInput;
+import com.learningpath.ai.reasoning.dto.GeminiReasoningResult;
+import com.learningpath.ai.reasoning.dto.LearnerProfileDto;
+import com.learningpath.ai.reasoning.service.GeminiReasoningService;
+import com.learningpath.repository.CourseRepository;
+import com.learningpath.skilldependency.service.SkillDependencyService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -38,8 +48,17 @@ public class RecommendationService {
 
     private final UserRepository userRepository;
     private final SkillGapService skillGapService;
+    private final CourseRepository courseRepository;
     private final CourseSkillRepository courseSkillRepository;
     private final MlRecommendationClient mlRecommendationClient;
+    private final GeminiReasoningService geminiReasoningService;
+    private final SkillDependencyService skillDependencyService;
+
+    @Value("${recommendation.scoring.rule-weight:0.70}")
+    private double ruleWeight = 0.70;
+
+    @Value("${recommendation.scoring.ml-weight:0.30}")
+    private double mlWeight = 0.30;
 
     private final RecommendationScoringEngine scoringEngine = new RecommendationScoringEngine();
 
@@ -109,9 +128,9 @@ public class RecommendationService {
             Optional<MlPredictionResponse> mlResponseOpt = mlRecommendationClient.predict(mlRequest);
             Double mlScore = mlResponseOpt.map(MlPredictionResponse::recommendationScore).orElse(null);
 
-            // Score candidate course (Rule-based score + ML score 60/40 combination)
+            // Score candidate course (Configurable Rule + ML hybrid scoring)
             CourseRecommendationResponse scored = scoringEngine.scoreAndBuildRecommendation(
-                    0, course, skillsForCourse, gapMap, user, mlScore
+                    0, course, skillsForCourse, gapMap, user, mlScore, ruleWeight, mlWeight
             );
 
             scoredRecommendations.add(scored);
@@ -146,6 +165,82 @@ public class RecommendationService {
             ));
         }
 
+        // 5. Enhance Recommendations with Gemini AI Reasoning & Explanations
+        List<CandidateCourseDto> candidateDtos = new ArrayList<>();
+        for (CourseRecommendationResponse r : rankedRecommendations) {
+            courseRepository.findById(r.courseId()).ifPresent(c -> {
+                candidateDtos.add(new CandidateCourseDto(
+                        r.courseId(),
+                        c.getCourseCode(),
+                        r.courseTitle(),
+                        r.provider(),
+                        r.difficulty() != null ? r.difficulty().name() : "BEGINNER",
+                        r.courseType() != null ? r.courseType().name() : "VIDEO_COURSE",
+                        r.matchedSkills(),
+                        r.gapSkillsAddressed(),
+                        r.ruleBasedScore() != null ? r.ruleBasedScore() : 0.0,
+                        r.mlScore(),
+                        r.finalScore()
+                ));
+            });
+        }
+
+        LearnerProfileDto learnerProfile = new LearnerProfileDto(
+                skillGaps.careerName(),
+                user.getExperienceLevel() != null ? user.getExperienceLevel().name() : "BEGINNER",
+                user.getDailyLearningHours() != null ? user.getDailyLearningHours().doubleValue() : 2.0,
+                user.getLearningStyle() != null ? user.getLearningStyle().name() : "VISUAL",
+                user.getPreferredContentType() != null ? user.getPreferredContentType().name() : "ARTICLE"
+        );
+
+        List<String> allGapSkillNames = skillGaps.gaps().stream()
+                .filter(g -> g.gapType() != GapType.NO_GAP)
+                .map(SkillGapItemResponse::skillName)
+                .toList();
+
+        List<String> prereqOrder = skillDependencyService.getLearningOrder(allGapSkillNames).learningOrder();
+
+        GeminiReasoningInput reasoningInput = new GeminiReasoningInput(
+                learnerProfile,
+                skillGaps.gaps(),
+                candidateDtos,
+                prereqOrder
+        );
+
+        GeminiReasoningResult reasoningResult = geminiReasoningService.generateReasoning(reasoningInput);
+
+        Map<UUID, String> reasonMap = new HashMap<>();
+        if (reasoningResult != null && reasoningResult.recommendations() != null) {
+            for (GeminiCourseExplanationDto exp : reasoningResult.recommendations()) {
+                if (exp.courseId() != null && exp.reason() != null) {
+                    reasonMap.put(exp.courseId(), exp.reason());
+                }
+            }
+        }
+
+        List<CourseRecommendationResponse> enhancedRecommendations = new ArrayList<>();
+        for (CourseRecommendationResponse item : rankedRecommendations) {
+            String enhancedExplanation = reasonMap.getOrDefault(item.courseId(), item.explanation());
+            enhancedRecommendations.add(new CourseRecommendationResponse(
+                    item.rank(),
+                    item.courseId(),
+                    item.courseTitle(),
+                    item.provider(),
+                    item.url(),
+                    item.difficulty(),
+                    item.courseType(),
+                    item.rating(),
+                    item.price(),
+                    item.isFree(),
+                    item.ruleBasedScore(),
+                    item.mlScore(),
+                    item.finalScore(),
+                    item.matchedSkills(),
+                    item.gapSkillsAddressed(),
+                    enhancedExplanation
+            ));
+        }
+
         // Summary Statistics
         int totalCandidates = scoredRecommendations.size();
         boolean hasGaps = !gapSkillIds.isEmpty();
@@ -157,7 +252,7 @@ public class RecommendationService {
                 skillGaps.careerName(),
                 hasGaps,
                 totalCandidates,
-                rankedRecommendations
+                enhancedRecommendations
         );
     }
 }

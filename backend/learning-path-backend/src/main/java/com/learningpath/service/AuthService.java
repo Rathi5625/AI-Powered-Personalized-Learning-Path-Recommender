@@ -2,6 +2,7 @@ package com.learningpath.service;
 
 import com.learningpath.dto.*;
 import com.learningpath.entity.User;
+import com.learningpath.entity.enums.UserRole;
 import com.learningpath.exception.EmailAlreadyExistsException;
 import com.learningpath.exception.ResourceNotFoundException;
 import com.learningpath.repository.UserRepository;
@@ -38,6 +39,7 @@ public class AuthService {
                 .fullName(request.name())
                 .email(request.email())
                 .passwordHash(hashedPassword)
+                .role(UserRole.USER)
                 .targetCareer(request.targetCareer())
                 .experienceLevel(request.experienceLevel())
                 .dailyLearningHours(request.dailyLearningHours())
@@ -46,7 +48,7 @@ public class AuthService {
                 .build();
 
         User savedUser = userRepository.save(user);
-        log.info("[AuthService] User registered successfully with id={}", savedUser.getId());
+        log.info("[AuthService] User registered successfully with id={}, role={}", savedUser.getId(), savedUser.getRole());
 
         return new SignupResponse(
                 savedUser.getId(),
@@ -68,14 +70,15 @@ public class AuthService {
             throw new BadCredentialsException("Invalid email or password");
         }
 
-        String token = jwtService.generateToken(user.getId(), user.getEmail());
+        UserRole role = user.getRole() != null ? user.getRole() : UserRole.USER;
+        String token = jwtService.generateToken(user.getId(), user.getEmail(), role.name());
         long expiresInSeconds = jwtService.getExpirationMs() / 1000;
 
         return new AuthResponse(
                 token,
                 "Bearer",
                 expiresInSeconds,
-                new UserSummaryResponse(user.getId(), user.getFullName(), user.getEmail())
+                new UserSummaryResponse(user.getId(), user.getFullName(), user.getEmail(), role)
         );
     }
 
@@ -84,10 +87,13 @@ public class AuthService {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
 
+        UserRole role = user.getRole() != null ? user.getRole() : UserRole.USER;
+
         return new AuthenticatedUserResponse(
                 user.getId(),
                 user.getFullName(),
                 user.getEmail(),
+                role,
                 user.getTargetCareer(),
                 user.getExperienceLevel(),
                 user.getDailyLearningHours(),

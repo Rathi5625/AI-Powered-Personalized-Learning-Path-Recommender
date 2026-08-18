@@ -49,17 +49,22 @@ public class JwtService {
         return Keys.hmacShaKeyFor(rawBytes);
     }
 
-    public String generateToken(UUID userId, String email) {
+    public String generateToken(UUID userId, String email, String role) {
         Date now = new Date();
         Date expiryDate = new Date(now.getTime() + expirationMs);
 
         return Jwts.builder()
                 .subject(userId.toString())
                 .claim("email", email)
+                .claim("role", role != null ? role : "USER")
                 .issuedAt(now)
                 .expiration(expiryDate)
                 .signWith(signingKey)
                 .compact();
+    }
+
+    public String generateToken(UUID userId, String email) {
+        return generateToken(userId, email, "USER");
     }
 
     public UUID extractUserId(String token) {
@@ -70,6 +75,12 @@ public class JwtService {
     public String extractEmail(String token) {
         Claims claims = extractAllClaims(token);
         return claims.get("email", String.class);
+    }
+
+    public String extractRole(String token) {
+        Claims claims = extractAllClaims(token);
+        String role = claims.get("role", String.class);
+        return role != null ? role : "USER";
     }
 
     public boolean validateToken(String token) {
