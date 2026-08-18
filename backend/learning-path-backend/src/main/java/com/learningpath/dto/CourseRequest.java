@@ -11,6 +11,8 @@ import jakarta.validation.constraints.Positive;
 import java.math.BigDecimal;
 
 public record CourseRequest(
+        String courseCode,
+
         @NotBlank(message = "Course title must not be blank")
         String title,
 
@@ -38,6 +40,28 @@ public record CourseRequest(
         @DecimalMin(value = "0.0", message = "Price cannot be negative")
         BigDecimal price,
 
-        Boolean isFree
+        Boolean isFree,
+
+        String youtubeTitle,
+
+        String youtubeUrl,
+
+        String youtubeNotes
 ) {
+    // Backward compatibility constructor for existing tests and client requests
+    public CourseRequest(
+            String title,
+            String description,
+            String provider,
+            String url,
+            CourseDifficulty difficulty,
+            Double durationHours,
+            CourseType courseType,
+            String language,
+            BigDecimal rating,
+            BigDecimal price,
+            Boolean isFree
+    ) {
+        this(null, title, description, provider, url, difficulty, durationHours, courseType, language, rating, price, isFree, null, null, null);
+    }
 }

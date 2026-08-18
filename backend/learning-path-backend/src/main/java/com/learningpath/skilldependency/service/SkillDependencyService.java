@@ -52,15 +52,25 @@ public class SkillDependencyService {
 
                     for (Map.Entry<String, List<String>> skillEntry : skillsMap.entrySet()) {
                         String skillName = skillEntry.getKey();
+                        if (skillName == null || skillName.trim().startsWith("---")) {
+                            continue;
+                        }
                         List<String> prereqs = skillEntry.getValue();
 
                         graph.addSkill(skillName, prereqs);
                         uniqueSkills.add(skillName);
                         if (prereqs != null) {
-                            uniqueSkills.addAll(prereqs);
+                            for (String p : prereqs) {
+                                if (p != null && !p.trim().startsWith("---")) {
+                                    uniqueSkills.add(p);
+                                }
+                            }
                         }
                     }
                 }
+
+                // Register canonical skill aliases
+                registerStandardAliases();
 
                 this.skillCount = uniqueSkills.size();
                 log.info("[SkillDependencyService] Loaded {} domains and {} unique skills into graph.", domainCount, skillCount);
@@ -78,6 +88,27 @@ public class SkillDependencyService {
             log.error("[SkillDependencyService] Failed to initialize Skill Dependency Engine: {}", e.getMessage());
             throw new RuntimeException("Skill Dependency Engine initialization failed", e);
         }
+    }
+
+    private void registerStandardAliases() {
+        graph.registerAlias("Internet Fundamentals", "Internet Basics");
+        graph.registerAlias("Databases (SQL)", "SQL Databases");
+        graph.registerAlias("SQL", "SQL Databases");
+        graph.registerAlias("Python Basics", "Python");
+        graph.registerAlias("Testing & Debugging", "Testing");
+        graph.registerAlias("Testing", "Testing & Debugging");
+        graph.registerAlias("Version Control(Git & GitHub)", "Git");
+        graph.registerAlias("Git", "Version Control(Git & GitHub)");
+        graph.registerAlias("HTML Fundamentals", "HTML");
+        graph.registerAlias("CSS Fundamentals", "CSS");
+        graph.registerAlias("JavaScript Foundations", "JavaScript");
+        graph.registerAlias("REST APIs in Node", "Backend REST APIs");
+        graph.registerAlias("AI-Assisted Coding", "AI Assisted Coding");
+        graph.registerAlias("AI Assisted Coding", "AI-Assisted Coding");
+        graph.registerAlias("Express.js", "Express.js (Web Framework)");
+        graph.registerAlias("Django or Flask", "Django or Flask (Web Framework)");
+        graph.registerAlias("React", "JavaScript Frameworks");
+        graph.registerAlias("JavaScript Frameworks", "React");
     }
 
     public int getDomainCount() {

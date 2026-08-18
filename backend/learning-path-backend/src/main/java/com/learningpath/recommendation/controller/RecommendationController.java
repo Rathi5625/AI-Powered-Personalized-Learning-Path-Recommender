@@ -23,7 +23,7 @@ public class RecommendationController {
     @GetMapping("/{userId}/recommendations")
     public ResponseEntity<RecommendationSummaryResponse> getRecommendations(
             @PathVariable UUID userId,
-            @RequestParam UUID careerId,
+            @RequestParam(required = false) UUID careerId,
             @RequestParam(required = false, defaultValue = "10") Integer limit,
             @RequestParam(required = false, defaultValue = "false") Boolean freeOnly,
             @RequestParam(required = false) CourseDifficulty difficulty

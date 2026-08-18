@@ -22,7 +22,7 @@ public class SkillGapController {
     @GetMapping
     public ResponseEntity<SkillGapAnalysisResponse> getSkillGaps(
             @PathVariable UUID userId,
-            @RequestParam UUID careerId
+            @RequestParam(required = false) UUID careerId
     ) {
         SkillGapAnalysisResponse response = skillGapService.analyzeSkillGap(userId, careerId);
         return ResponseEntity.ok(response);

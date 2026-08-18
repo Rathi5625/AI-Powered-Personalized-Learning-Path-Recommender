@@ -23,6 +23,8 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
+import com.learningpath.dataset.CourseDatasetImporter;
+import com.learningpath.service.SkillMappingService;
 
 @Component
 @Order(2)
@@ -33,24 +35,29 @@ public class CourseDataInitializer implements CommandLineRunner {
     private final CourseRepository courseRepository;
     private final SkillRepository skillRepository;
     private final CourseSkillRepository courseSkillRepository;
+    private final CourseDatasetImporter courseDatasetImporter;
+    private final SkillMappingService skillMappingService;
 
     @Override
     @Transactional
     public void run(String... args) {
-        if (courseRepository.count() > 0) {
-            log.info("Courses already initialized. Skipping seed data insertion.");
-            return;
+        if (courseRepository.count() == 0) {
+            log.info("Initializing realistic seed data for Courses and Course Skills...");
+
+            // Ensure skills catalog exists
+            Map<String, Skill> skillMap = ensureSkillsCatalog();
+
+            // Seed 21 realistic baseline courses
+            seedCoursesAndMappings(skillMap);
+
+            log.info("Baseline course catalog and CourseSkill mappings successfully populated.");
         }
 
-        log.info("Initializing realistic seed data for Courses and Course Skills...");
+        // Idempotently ingest the curated techbot dataset (244 courses)
+        courseDatasetImporter.importDataset();
 
-        // Ensure skills catalog exists
-        Map<String, Skill> skillMap = ensureSkillsCatalog();
-
-        // Seed 21 realistic courses
-        seedCoursesAndMappings(skillMap);
-
-        log.info("Course catalog and CourseSkill mappings successfully populated.");
+        // Idempotently synchronize canonical skills, persistent aliases, and CourseSkill mappings
+        skillMappingService.initializeAndLinkAll();
     }
 
     private Map<String, Skill> ensureSkillsCatalog() {

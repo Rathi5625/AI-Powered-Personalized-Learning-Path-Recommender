@@ -19,11 +19,23 @@ public class SkillDependencyGraph {
     // Set of all known skill names (original casing)
     private final Set<String> allSkills = new LinkedHashSet<>();
 
+    // Alias mapping: (lowercase alias -> canonical graph skill name)
+    private final Map<String, String> aliasMap = new HashMap<>();
+
+    /**
+     * Registers an alias that maps to a target canonical skill in the graph.
+     */
+    public void registerAlias(String alias, String targetCanonicalSkill) {
+        if (alias != null && targetCanonicalSkill != null && !alias.trim().isEmpty() && !targetCanonicalSkill.trim().isEmpty()) {
+            aliasMap.put(alias.trim().toLowerCase(), targetCanonicalSkill.trim());
+        }
+    }
+
     /**
      * Registers a skill and its direct prerequisites.
      */
     public void addSkill(String skillName, List<String> directPrereqs) {
-        if (skillName == null || skillName.trim().isEmpty()) {
+        if (skillName == null || skillName.trim().isEmpty() || skillName.trim().startsWith("---")) {
             return;
         }
 
@@ -37,7 +49,7 @@ public class SkillDependencyGraph {
 
         if (directPrereqs != null) {
             for (String prereq : directPrereqs) {
-                if (prereq == null || prereq.trim().isEmpty()) {
+                if (prereq == null || prereq.trim().isEmpty() || prereq.trim().startsWith("---")) {
                     continue;
                 }
                 String canonicalPrereq = prereq.trim();
@@ -60,12 +72,32 @@ public class SkillDependencyGraph {
     }
 
     public boolean containsSkill(String skillName) {
-        return skillName != null && canonicalNameMap.containsKey(skillName.trim().toLowerCase());
+        if (skillName == null) return false;
+        String lower = skillName.trim().toLowerCase();
+        if (canonicalNameMap.containsKey(lower)) {
+            return true;
+        }
+        String mapped = aliasMap.get(lower);
+        return mapped != null && (canonicalNameMap.containsKey(mapped.toLowerCase()) || allSkills.contains(mapped));
     }
 
     public String getCanonicalName(String skillName) {
         if (skillName == null) return null;
-        return canonicalNameMap.get(skillName.trim().toLowerCase());
+        String lower = skillName.trim().toLowerCase();
+        if (canonicalNameMap.containsKey(lower)) {
+            return canonicalNameMap.get(lower);
+        }
+        String mapped = aliasMap.get(lower);
+        if (mapped != null) {
+            String targetLower = mapped.toLowerCase();
+            if (canonicalNameMap.containsKey(targetLower)) {
+                return canonicalNameMap.get(targetLower);
+            }
+            if (allSkills.contains(mapped)) {
+                return mapped;
+            }
+        }
+        return null;
     }
 
     public Set<String> getAllSkills() {

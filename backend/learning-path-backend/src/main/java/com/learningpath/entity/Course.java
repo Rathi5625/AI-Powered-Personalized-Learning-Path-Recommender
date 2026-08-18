@@ -20,6 +20,7 @@ import java.math.BigDecimal;
 @Table(
         name = "courses",
         indexes = {
+                @Index(name = "idx_courses_course_code", columnList = "course_code"),
                 @Index(name = "idx_courses_title", columnList = "title"),
                 @Index(name = "idx_courses_provider", columnList = "provider"),
                 @Index(name = "idx_courses_difficulty", columnList = "difficulty"),
@@ -33,6 +34,9 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Builder
 public class Course extends BaseEntity {
+
+    @Column(name = "course_code", length = 50, unique = true)
+    private String courseCode;
 
     @Column(nullable = false, length = 200)
     private String title;
@@ -73,4 +77,13 @@ public class Course extends BaseEntity {
     @Column(name = "is_free", nullable = false)
     @Builder.Default
     private boolean isFree = false;
+
+    @Column(name = "youtube_title", length = 255)
+    private String youtubeTitle;
+
+    @Column(name = "youtube_url", length = 500)
+    private String youtubeUrl;
+
+    @Column(name = "youtube_notes", columnDefinition = "TEXT")
+    private String youtubeNotes;
 }

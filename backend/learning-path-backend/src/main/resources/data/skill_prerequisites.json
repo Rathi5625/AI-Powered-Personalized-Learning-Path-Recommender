@@ -11,10 +11,40 @@
       "HTML",
       "CSS"
     ],
+    "CLI & Terminal Basics": [],
+    "Version Control(Git & GitHub)": [
+      "CLI & Terminal Basics"
+    ],
+    "VCS Hosting": [
+      "Version Control(Git & GitHub)"
+    ],
     "Package Managers": [
-      "Internet Basics"
+      "JavaScript",
+      "CLI & Terminal Basics"
+    ],
+    "CSS Frameworks": [
+      "CSS"
     ],
     "JavaScript Frameworks": [
+      "JavaScript",
+      "Package Managers"
+    ],
+    "AI-Assisted Coding": [
+      "JavaScript Frameworks"
+    ],
+    "Generative AI for Frontend": [
+      "JavaScript Frameworks",
+      "CSS Frameworks"
+    ],
+    "Implementing AI in Frontend": [
+      "JavaScript Frameworks",
+      "Generative AI for Frontend"
+    ],
+    "Linters & formatters": [
+      "JavaScript",
+      "CLI & Terminal Basics"
+    ],
+    "Module Bundlers": [
       "JavaScript",
       "Package Managers"
     ],
@@ -22,12 +52,151 @@
       "JavaScript",
       "Internet Basics"
     ],
+    "Auth Strategies": [
+      "JavaScript Frameworks",
+      "REST APIs"
+    ],
+    "Testing & Debugging": [
+      "JavaScript",
+      "JavaScript Frameworks"
+    ],
+    "Browser Web APIs": [
+      "JavaScript"
+    ],
+    "Web Security": [
+      "Internet Basics",
+      "Browser Web APIs"
+    ],
+    "Server-Side Rendering": [
+      "JavaScript Frameworks",
+      "REST APIs"
+    ],
+    "Static Site Generators": [
+      "JavaScript Frameworks",
+      "Module Bundlers"
+    ],
+    "Type Checkers": [
+      "JavaScript",
+      "Linters & formatters"
+    ],
+    "Deployment": [
+      "VCS Hosting",
+      "Internet Basics"
+    ],
+    "Design Systems": [
+      "CSS Frameworks",
+      "JavaScript Frameworks"
+    ],
+    "Performance": [
+      "Browser Web APIs",
+      "Module Bundlers"
+    ],
+    "Web Components": [
+      "JavaScript",
+      "Browser Web APIs"
+    ],
     "GraphQL": [
       "REST APIs",
       "JavaScript Frameworks"
+    ],
+    "Accessibility": [
+      "HTML",
+      "CSS"
+    ],
+    "Progressive Web Apps": [
+      "Browser Web APIs",
+      "Web Security"
+    ],
+    "Mobile Apps": [
+      "JavaScript Frameworks",
+      "CLI & Terminal Basics"
+    ],
+    "Desktop Applications in JavaScript": [
+      "JavaScript Frameworks",
+      "CLI & Terminal Basics"
     ]
   },
   "BackEnd Development": {
+    "Introduction to Backend Development": [
+      "Internet Basics"
+    ],
+    "Frontend Basics": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "Node.js Basics": [
+      "JavaScript"
+    ],
+    "Express.js (Web Framework)": [
+      "Node.js Basics"
+    ],
+    "REST APIs in Node": [
+      "Express.js (Web Framework)"
+    ],
+    "Testing (Node.js)": [
+      "REST APIs in Node"
+    ],
+    "Django or Flask (Web Framework)": [
+      "Python"
+    ],
+    "REST APIs in Python": [
+      "Django or Flask (Web Framework)"
+    ],
+    "Testing (Python)": [
+      "REST APIs in Python"
+    ],
+    "Backend Track Completed (Milestone)": [
+      "Testing (Node.js)"
+    ],
+    "Databases (SQL)": [
+      "Backend Track Completed (Milestone)"
+    ],
+    "NoSQL Databases": [
+      "Databases (SQL)"
+    ],
+    "Learn about Web Servers": [
+      "Backend Track Completed (Milestone)"
+    ],
+    "CI/CD Basics": [
+      "Learn about Web Servers"
+    ],
+    "AI Assisted Coding": [
+      "Backend Track Completed (Milestone)"
+    ],
+    "Learn the Basics (AI in Backend)": [
+      "Databases (SQL)"
+    ],
+    "AI Applications in Software Development": [
+      "Learn the Basics (AI in Backend)"
+    ],
+    "Integration Patterns (For AI)": [
+      "AI Applications in Software Development"
+    ],
+    "Caching": [
+      "Databases (SQL)"
+    ],
+    "Search Engines": [
+      "Databases (SQL)"
+    ],
+    "Real Time Data": [
+      "Backend Track Completed (Milestone)"
+    ],
+    "Message Brokers": [
+      "Backend Track Completed (Milestone)"
+    ],
+    "Scaling Databases": [
+      "Databases (SQL)",
+      "NoSQL Databases",
+      "Caching"
+    ],
+    "Architectural Patterns": [
+      "Message Brokers",
+      "Scaling Databases"
+    ],
+    "Building for Scale": [
+      "Architectural Patterns"
+    ],
     "Java": [
       "Internet Basics"
     ],

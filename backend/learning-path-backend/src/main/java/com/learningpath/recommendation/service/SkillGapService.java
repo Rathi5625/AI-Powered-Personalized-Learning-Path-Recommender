@@ -40,10 +40,27 @@ public class SkillGapService {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + userId));
 
-        Career career = careerRepository.findById(careerId)
-                .orElseThrow(() -> new ResourceNotFoundException("Career not found with id: " + careerId));
+        Career career;
+        if (careerId != null) {
+            career = careerRepository.findById(careerId)
+                    .orElseThrow(() -> new ResourceNotFoundException("Career not found with id: " + careerId));
+        } else {
+            String targetCareerTitle = user.getTargetCareer();
+            if (targetCareerTitle == null || targetCareerTitle.trim().isEmpty()) {
+                throw new ResourceNotFoundException("User does not have a target career set. Please specify a careerId or set a target career.");
+            }
+            career = careerRepository.findByTitle(targetCareerTitle.trim())
+                    .orElseGet(() -> {
+                        List<Career> matches = careerRepository.findByTitleContainingIgnoreCase(targetCareerTitle.trim());
+                        if (matches.isEmpty()) {
+                            throw new ResourceNotFoundException("Target career '" + targetCareerTitle + "' not found in careers catalog");
+                        }
+                        return matches.get(0);
+                    });
+        }
 
-        List<CareerSkill> careerSkills = careerSkillRepository.findByCareerId(careerId);
+        UUID resolvedCareerId = career.getId();
+        List<CareerSkill> careerSkills = careerSkillRepository.findByCareerId(resolvedCareerId);
         List<UserSkill> userSkills = userSkillRepository.findByUserId(userId);
 
         Map<UUID, UserSkill> userSkillMap = userSkills.stream()

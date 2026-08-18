@@ -36,6 +36,7 @@ public class CourseService {
         String language = request.language() != null && !request.language().isBlank() ? request.language() : "English";
 
         Course course = Course.builder()
+                .courseCode(request.courseCode())
                 .title(request.title())
                 .description(request.description())
                 .provider(request.provider())
@@ -47,6 +48,9 @@ public class CourseService {
                 .rating(request.rating())
                 .price(request.price())
                 .isFree(isFree)
+                .youtubeTitle(request.youtubeTitle())
+                .youtubeUrl(request.youtubeUrl())
+                .youtubeNotes(request.youtubeNotes())
                 .build();
 
         Course savedCourse = courseRepository.save(course);
@@ -77,6 +81,9 @@ public class CourseService {
         boolean isFree = request.isFree() != null ? request.isFree() : (request.price() != null && request.price().compareTo(BigDecimal.ZERO) == 0);
         String language = request.language() != null && !request.language().isBlank() ? request.language() : "English";
 
+        if (request.courseCode() != null) {
+            course.setCourseCode(request.courseCode());
+        }
         course.setTitle(request.title());
         course.setDescription(request.description());
         course.setProvider(request.provider());
@@ -88,6 +95,9 @@ public class CourseService {
         course.setRating(request.rating());
         course.setPrice(request.price());
         course.setFree(isFree);
+        course.setYoutubeTitle(request.youtubeTitle());
+        course.setYoutubeUrl(request.youtubeUrl());
+        course.setYoutubeNotes(request.youtubeNotes());
 
         Course updatedCourse = courseRepository.save(course);
         return mapToCourseResponse(updatedCourse);
@@ -125,6 +135,7 @@ public class CourseService {
     private CourseResponse mapToCourseResponse(Course course) {
         return new CourseResponse(
                 course.getId(),
+                course.getCourseCode(),
                 course.getTitle(),
                 course.getDescription(),
                 course.getProvider(),
@@ -136,6 +147,9 @@ public class CourseService {
                 course.getRating(),
                 course.getPrice(),
                 course.isFree(),
+                course.getYoutubeTitle(),
+                course.getYoutubeUrl(),
+                course.getYoutubeNotes(),
                 course.getCreatedAt(),
                 course.getUpdatedAt()
         );
