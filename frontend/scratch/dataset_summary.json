@@ -1,0 +1,241 @@
+{
+  "total_courses": 244,
+  "unique_skills_count": 61,
+  "skills": [
+    "AI Applications in Software Development",
+    "AI Assisted Coding",
+    "AI-Assisted Coding",
+    "Accessibility",
+    "Architectural Patterns",
+    "Auth Strategies",
+    "Browser Web APIs",
+    "Building for Scale",
+    "CI/CD Basics",
+    "CLI & Terminal Basics",
+    "CSS",
+    "CSS Frameworks",
+    "CSS Fundamentals",
+    "Caching",
+    "Databases (SQL)",
+    "Deployment",
+    "Design Systems",
+    "Desktop Applications in JavaScript",
+    "Django or Flask (Web Framework)",
+    "Express.js (Web Framework)",
+    "Frontend Basics",
+    "Generative AI for Frontend",
+    "GraphQL",
+    "HTML",
+    "HTML Fundamentals",
+    "Implementing AI in Frontend",
+    "Integration Patterns (For AI)",
+    "Internet Basics",
+    "Internet Fundamentals",
+    "Introduction to Backend Development",
+    "JavaScript",
+    "JavaScript Foundations",
+    "JavaScript Frameworks",
+    "Learn about Web Servers",
+    "Learn the Basics (AI in Backend)",
+    "Linters & formatters",
+    "Message Brokers",
+    "Mobile Apps",
+    "Module Bundlers",
+    "NoSQL Databases",
+    "Node.js Basics",
+    "Package Managers",
+    "Performance",
+    "Progressive Web Apps",
+    "Python Basics",
+    "REST APIs",
+    "REST APIs in Node",
+    "REST APIs in Python",
+    "Real Time Data",
+    "Scaling Databases",
+    "Search Engines",
+    "Server-Side Rendering",
+    "Static Site Generators",
+    "Testing & Debugging",
+    "Testing (Node.js)",
+    "Testing (Python)",
+    "Type Checkers",
+    "VCS Hosting",
+    "Version Control(Git & GitHub)",
+    "Web Components",
+    "Web Security"
+  ],
+  "unique_levels": [
+    "Beginner",
+    "Easy",
+    "High",
+    "Medium"
+  ],
+  "level_counts": {
+    "Beginner": 61,
+    "Easy": 61,
+    "Medium": 61,
+    "High": 61
+  },
+  "duration_hours_counts": {
+    "3": 61,
+    "6": 61,
+    "10": 61,
+    "15": 61
+  },
+  "unique_platforms_count": 95,
+  "top_platforms": [
+    [
+      "MDN",
+      46
+    ],
+    [
+      "web.dev",
+      14
+    ],
+    [
+      "freeCodeCamp",
+      13
+    ],
+    [
+      "GitHub",
+      11
+    ],
+    [
+      "Google",
+      9
+    ],
+    [
+      "Microsoft",
+      9
+    ],
+    [
+      "Redis",
+      5
+    ],
+    [
+      "RESTful API",
+      4
+    ],
+    [
+      "Postman",
+      4
+    ],
+    [
+      "University of Helsinki",
+      4
+    ],
+    [
+      "Atlassian",
+      3
+    ],
+    [
+      "OWASP",
+      3
+    ],
+    [
+      "Jest",
+      3
+    ],
+    [
+      "Vitest",
+      3
+    ],
+    [
+      "Playwright",
+      3
+    ]
+  ],
+  "duplicate_titles_count": 43,
+  "duplicate_titles_sample": [
+    [
+      "web.dev: Learn Performance",
+      2
+    ],
+    [
+      "freeCodeCamp: Responsive Web Design",
+      5
+    ],
+    [
+      "MDN: Structuring content with HTML",
+      2
+    ],
+    [
+      "MDN: Introduction to HTML",
+      2
+    ],
+    [
+      "web.dev: Learn HTML",
+      2
+    ],
+    [
+      "MDN: CSS styling basics",
+      2
+    ],
+    [
+      "MDN: CSS layout",
+      2
+    ],
+    [
+      "web.dev: Learn CSS",
+      2
+    ],
+    [
+      "MDN: JavaScript Guide",
+      2
+    ],
+    [
+      "MDN: Dynamic scripting with JavaScript",
+      2
+    ],
+    [
+      "javascript.info",
+      2
+    ],
+    [
+      "freeCodeCamp: JavaScript Algorithms and Data Structures",
+      2
+    ],
+    [
+      "Pro Git Book",
+      2
+    ],
+    [
+      "GitHub Skills: Introduction to GitHub",
+      2
+    ],
+    [
+      "GitHub Docs: Git guides",
+      2
+    ]
+  ],
+  "duplicate_links_count": 43,
+  "malformed_urls": [],
+  "youtube_links_count": 0,
+  "youtube_links_sample": [],
+  "readme": [
+    {
+      "Check": "Source of truth",
+      "Result": "Exact finalized JSON supplied by user"
+    },
+    {
+      "Check": "Skills",
+      "Result": "61 actual skills (32 Frontend + 29 Backend)"
+    },
+    {
+      "Check": "Rows",
+      "Result": "244 (61 \u00d7 4)"
+    },
+    {
+      "Check": "Levels per skill",
+      "Result": "Beginner, Easy, Medium, High"
+    },
+    {
+      "Check": "Search-result links",
+      "Result": "None used; links point to specific learning resources/tutorial/course pages"
+    },
+    {
+      "Check": "Duration",
+      "Result": "Estimated learning time; not provider-certified"
+    }
+  ]
+}

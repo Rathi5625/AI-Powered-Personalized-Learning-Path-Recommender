@@ -1,0 +1,7 @@
+{
+  "min_new_interactions": 500,
+  "min_eval_samples": 100,
+  "min_f1_improvement": 0.01,
+  "max_rocauc_degradation": 0.02,
+  "random_state": 42
+}
