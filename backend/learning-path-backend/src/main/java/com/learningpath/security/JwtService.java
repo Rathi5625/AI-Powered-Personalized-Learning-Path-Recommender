@@ -95,6 +95,29 @@ public class JwtService {
         return false;
     }
 
+    public String generatePasswordResetToken(String email) {
+        Date now = new Date();
+        // 15-minute expiration for password reset tokens
+        Date expiryDate = new Date(now.getTime() + (15 * 60 * 1000));
+
+        return Jwts.builder()
+                .subject(email)
+                .claim("purpose", "PASSWORD_RESET")
+                .issuedAt(now)
+                .expiration(expiryDate)
+                .signWith(signingKey)
+                .compact();
+    }
+
+    public String validatePasswordResetTokenAndGetEmail(String token) {
+        Claims claims = extractAllClaims(token);
+        String purpose = claims.get("purpose", String.class);
+        if (!"PASSWORD_RESET".equals(purpose)) {
+            throw new IllegalArgumentException("Invalid token purpose");
+        }
+        return claims.getSubject();
+    }
+
     public long getExpirationMs() {
         return expirationMs;
     }

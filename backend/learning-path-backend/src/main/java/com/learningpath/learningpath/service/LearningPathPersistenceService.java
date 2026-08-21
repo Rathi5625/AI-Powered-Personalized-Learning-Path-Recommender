@@ -121,6 +121,22 @@ public class LearningPathPersistenceService {
     }
 
     /**
+     * Finds the learner's active learning path without throwing when not found.
+     *
+     * @param userId The learner's UUID.
+     * @return Optional containing the active path response if one exists, empty otherwise.
+     */
+    @Transactional(readOnly = true)
+    public Optional<ActiveLearningPathResponse> findActivePath(UUID userId) {
+        if (!userRepository.existsById(userId)) {
+            throw new ResourceNotFoundException("User not found with id: " + userId);
+        }
+
+        return learningPathRepository.findByUserIdAndStatus(userId, LearningPathStatus.ACTIVE)
+                .map(this::buildActivePathResponse);
+    }
+
+    /**
      * Retrieves the learner's active learning path.
      *
      * @param userId The learner's UUID.
@@ -129,14 +145,8 @@ public class LearningPathPersistenceService {
      */
     @Transactional(readOnly = true)
     public ActiveLearningPathResponse getActivePath(UUID userId) {
-        if (!userRepository.existsById(userId)) {
-            throw new ResourceNotFoundException("User not found with id: " + userId);
-        }
-
-        LearningPath activePath = learningPathRepository.findByUserIdAndStatus(userId, LearningPathStatus.ACTIVE)
+        return findActivePath(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("No active learning path found for user id: " + userId));
-
-        return buildActivePathResponse(activePath);
     }
 
     /**

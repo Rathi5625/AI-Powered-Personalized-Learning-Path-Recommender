@@ -69,7 +69,8 @@ public class GeminiClient {
             return AiTestResponse.fail(model, "AI service request timed out or network unavailable");
         } catch (HttpClientErrorException | HttpServerErrorException e) {
             log.error("Gemini API HTTP Error [Status: {}]: {}", e.getStatusCode(), e.getStatusText());
-            return AiTestResponse.fail(model, "AI service temporarily unavailable (HTTP " + e.getStatusCode().value() + ")");
+            return AiTestResponse.fail(model,
+                    "AI service temporarily unavailable (HTTP " + e.getStatusCode().value() + ")");
         } catch (Exception e) {
             log.error("Unexpected error during Gemini API invocation: {}", e.getMessage());
             return AiTestResponse.fail(model, "AI service temporarily unavailable");

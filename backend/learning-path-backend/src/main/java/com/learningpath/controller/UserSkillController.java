@@ -70,3 +70,4 @@ public class UserSkillController {
         return ResponseEntity.noContent().build();
     }
 }
+

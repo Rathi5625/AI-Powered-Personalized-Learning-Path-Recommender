@@ -1,0 +1,9 @@
+{
+  "test_1_skill_gap_status_200": true,
+  "test_2_summary_fields": true,
+  "test_3_gap_items_valid": true,
+  "test_4_prerequisites": true,
+  "test_5_learning_order": true,
+  "test_6_unauthorized_401": true,
+  "test_7_cross_user_403": true
+}

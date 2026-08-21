@@ -1,0 +1,834 @@
+[
+  {
+    "frontend_file": "frontend/.env.example",
+    "frontend_rel": ".env.example",
+    "size": 633,
+    "hash": "62a8209041bef984b0bc0d1237481b4c",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": ".env.example"
+  },
+  {
+    "frontend_file": "frontend/.gitignore",
+    "frontend_rel": ".gitignore",
+    "size": 554,
+    "hash": "a516c1bdb2e9c3d51ca56431f093e815",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": ".gitignore"
+  },
+  {
+    "frontend_file": "frontend/index.html",
+    "frontend_rel": "index.html",
+    "size": 722,
+    "hash": "0fa8892449923bce15af9b64c2116bf1",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/package-lock.json",
+    "frontend_rel": "package-lock.json",
+    "size": 115462,
+    "hash": "a771e78afd0fbc33e7109b32f737d165",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/package.json",
+    "frontend_rel": "package.json",
+    "size": 802,
+    "hash": "7235a16749a6c0ab79ebcb631604a8bf",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/README.md",
+    "frontend_rel": "README.md",
+    "size": 1206,
+    "hash": "1d45b68d260f25f0bce3ec7b99e97dc9",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "README.md"
+  },
+  {
+    "frontend_file": "frontend/spline.html",
+    "frontend_rel": "spline.html",
+    "size": 697989,
+    "hash": "eef7721f725de5c879f0f436eab2dd20",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/tsconfig.app.json",
+    "frontend_rel": "tsconfig.app.json",
+    "size": 649,
+    "hash": "38fce6fd724425d17458f92ac2821425",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/tsconfig.json",
+    "frontend_rel": "tsconfig.json",
+    "size": 126,
+    "hash": "852c3a5df14a4b43ac28e9554ebedf4a",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/tsconfig.node.json",
+    "frontend_rel": "tsconfig.node.json",
+    "size": 575,
+    "hash": "0a99f1dd7d3d64dc36348873132bd4d4",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/vite.config.ts",
+    "frontend_rel": "vite.config.ts",
+    "size": 359,
+    "hash": "68d9a308de2fc9833686ed9c521af4d5",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/database/06_add_user_role.sql",
+    "frontend_rel": "database/06_add_user_role.sql",
+    "size": 678,
+    "hash": "721e01ee0d5f61792dd47e2d7262d037",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "database/06_add_user_role.sql"
+  },
+  {
+    "frontend_file": "frontend/database/07_course_dataset_schema.sql",
+    "frontend_rel": "database/07_course_dataset_schema.sql",
+    "size": 2203,
+    "hash": "5835de374faad0ccc5869de165890f1d",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "database/07_course_dataset_schema.sql"
+  },
+  {
+    "frontend_file": "frontend/database/08_skill_aliases_schema.sql",
+    "frontend_rel": "database/08_skill_aliases_schema.sql",
+    "size": 1973,
+    "hash": "6b89d8d0fbcbfc94ef16b99308c79dd8",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "database/08_skill_aliases_schema.sql"
+  },
+  {
+    "frontend_file": "frontend/datasets/techbot.xlsx",
+    "frontend_rel": "datasets/techbot.xlsx",
+    "size": 19008,
+    "hash": "2a28be1523779a6c5f1d358a076fe9dc",
+    "match_type": "EXACT_DUPLICATE",
+    "matched_root_file": "datasets/techbot.xlsx"
+  },
+  {
+    "frontend_file": "frontend/datasets/techbot_audit_raw.json",
+    "frontend_rel": "datasets/techbot_audit_raw.json",
+    "size": 76160,
+    "hash": "9f7756e9987c2cfae1c572e3fa12755f",
+    "match_type": "EXACT_DUPLICATE",
+    "matched_root_file": "datasets/techbot_audit_raw.json"
+  },
+  {
+    "frontend_file": "frontend/docs/canonical-skill-mapping-report.md",
+    "frontend_rel": "docs/canonical-skill-mapping-report.md",
+    "size": 14915,
+    "hash": "f405f505229682c5a924f89112a571b7",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "docs/canonical-skill-mapping-report.md"
+  },
+  {
+    "frontend_file": "frontend/docs/course-catalog-quality-report.md",
+    "frontend_rel": "docs/course-catalog-quality-report.md",
+    "size": 8618,
+    "hash": "188d689fbb478f00c5a50957c5f1fa36",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "docs/course-catalog-quality-report.md"
+  },
+  {
+    "frontend_file": "frontend/docs/course-dataset-audit.md",
+    "frontend_rel": "docs/course-dataset-audit.md",
+    "size": 16747,
+    "hash": "65aea352f3aa911ff5396564c3cd186f",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "docs/course-dataset-audit.md"
+  },
+  {
+    "frontend_file": "frontend/docs/course-import-report.md",
+    "frontend_rel": "docs/course-import-report.md",
+    "size": 7057,
+    "hash": "1cc9fe123ab5f4f650c5b544d60b0c18",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "docs/course-import-report.md"
+  },
+  {
+    "frontend_file": "frontend/docs/course-schema-migration-report.md",
+    "frontend_rel": "docs/course-schema-migration-report.md",
+    "size": 6307,
+    "hash": "7aa70c7099ddb0ab5b7ce6f3e0055c17",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "docs/course-schema-migration-report.md"
+  },
+  {
+    "frontend_file": "frontend/docs/gemini-ai-reasoning-report.md",
+    "frontend_rel": "docs/gemini-ai-reasoning-report.md",
+    "size": 7474,
+    "hash": "0b465c7fe70ac5bbf2cb2758e744d31c",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "docs/gemini-ai-reasoning-report.md"
+  },
+  {
+    "frontend_file": "frontend/docs/ml-ranking-engine-report.md",
+    "frontend_rel": "docs/ml-ranking-engine-report.md",
+    "size": 8002,
+    "hash": "258c7c280d3d92867cb71a283e98821e",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "docs/ml-ranking-engine-report.md"
+  },
+  {
+    "frontend_file": "frontend/ml-service/.gitignore",
+    "frontend_rel": "ml-service/.gitignore",
+    "size": 112,
+    "hash": "8741374720333c7deb026d477df480e4",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/.gitignore"
+  },
+  {
+    "frontend_file": "frontend/ml-service/README.md",
+    "frontend_rel": "ml-service/README.md",
+    "size": 1703,
+    "hash": "9411afe36ff9e225984197c472a2ec36",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/README.md"
+  },
+  {
+    "frontend_file": "frontend/ml-service/requirements.txt",
+    "frontend_rel": "ml-service/requirements.txt",
+    "size": 142,
+    "hash": "86a816aa67fd60b5b2792822d268030f",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/requirements.txt"
+  },
+  {
+    "frontend_file": "frontend/ml-service/app/main.py",
+    "frontend_rel": "ml-service/app/main.py",
+    "size": 3064,
+    "hash": "2dc9810aaf848f07763d9d1bd6081f5e",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/app/main.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/app/model_registry.py",
+    "frontend_rel": "ml-service/app/model_registry.py",
+    "size": 10340,
+    "hash": "04c36f13144a1a926cc4f81e8a7ec9fa",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/app/model_registry.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/app/model_service.py",
+    "frontend_rel": "ml-service/app/model_service.py",
+    "size": 3183,
+    "hash": "592a119b70cffa528a41e93abbb8348b",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/app/model_service.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/app/schemas.py",
+    "frontend_rel": "ml-service/app/schemas.py",
+    "size": 2711,
+    "hash": "254cf48c37501952b4d14cbd47c6e6d9",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/app/schemas.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/app/__init__.py",
+    "frontend_rel": "ml-service/app/__init__.py",
+    "size": 56,
+    "hash": "77826ed3ee7b708f5727c02ae8d12d29",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/app/__init__.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/config/retraining_config.json",
+    "frontend_rel": "ml-service/config/retraining_config.json",
+    "size": 154,
+    "hash": "168a44985f9eb848724c25b61079b1cc",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/config/retraining_config.json"
+  },
+  {
+    "frontend_file": "frontend/ml-service/data/.gitkeep",
+    "frontend_rel": "ml-service/data/.gitkeep",
+    "size": 36,
+    "hash": "17e7ed8f2b99045a3688323f0bccd5d7",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/data/.gitkeep"
+  },
+  {
+    "frontend_file": "frontend/ml-service/data/REAL_DATA_README.md",
+    "frontend_rel": "ml-service/data/REAL_DATA_README.md",
+    "size": 3392,
+    "hash": "62bfdb99ec92659b57c687db846fec15",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/data/REAL_DATA_README.md"
+  },
+  {
+    "frontend_file": "frontend/ml-service/data/training_data.csv",
+    "frontend_rel": "ml-service/data/training_data.csv",
+    "size": 587943,
+    "hash": "4aabbd8ca4f8aad66bdc2c65dc75e3a8",
+    "match_type": "EXACT_DUPLICATE",
+    "matched_root_file": "ml-service/data/training_data.csv"
+  },
+  {
+    "frontend_file": "frontend/ml-service/models/.gitkeep",
+    "frontend_rel": "ml-service/models/.gitkeep",
+    "size": 38,
+    "hash": "59ff525bd7755ee33533bedbed793a14",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/models/.gitkeep"
+  },
+  {
+    "frontend_file": "frontend/ml-service/models/feature_columns.json",
+    "frontend_rel": "ml-service/models/feature_columns.json",
+    "size": 245,
+    "hash": "8506df02596332f7b1824ff8273dbfe4",
+    "match_type": "EXACT_DUPLICATE",
+    "matched_root_file": "ml-service/models/feature_columns.json"
+  },
+  {
+    "frontend_file": "frontend/ml-service/models/model_comparison_v1_v2.json",
+    "frontend_rel": "ml-service/models/model_comparison_v1_v2.json",
+    "size": 329,
+    "hash": "20d401d0dd3a7322f7c7eefe12a29710",
+    "match_type": "EXACT_DUPLICATE",
+    "matched_root_file": "ml-service/models/model_comparison_v1_v2.json"
+  },
+  {
+    "frontend_file": "frontend/ml-service/models/model_comparison_v1_v2.md",
+    "frontend_rel": "ml-service/models/model_comparison_v1_v2.md",
+    "size": 782,
+    "hash": "3f4f36493c040f7685dc52721361c099",
+    "match_type": "EXACT_DUPLICATE",
+    "matched_root_file": "ml-service/models/model_comparison_v1_v2.md"
+  },
+  {
+    "frontend_file": "frontend/ml-service/models/model_metadata.json",
+    "frontend_rel": "ml-service/models/model_metadata.json",
+    "size": 638,
+    "hash": "9347d90c7a213b85dd91bc572382a5f1",
+    "match_type": "EXACT_DUPLICATE",
+    "matched_root_file": "ml-service/models/model_metadata.json"
+  },
+  {
+    "frontend_file": "frontend/ml-service/models/registry.json",
+    "frontend_rel": "ml-service/models/registry.json",
+    "size": 708,
+    "hash": "da4317b16b314282a6c6ae77b0396b0e",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/models/registry.json"
+  },
+  {
+    "frontend_file": "frontend/ml-service/models/retraining_history.json",
+    "frontend_rel": "ml-service/models/retraining_history.json",
+    "size": 4,
+    "hash": "35d0e0b801444bb1f4c2115720f8e4f6",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/models/retraining_history.json"
+  },
+  {
+    "frontend_file": "frontend/ml-service/models/retraining_state.json",
+    "frontend_rel": "ml-service/models/retraining_state.json",
+    "size": 181,
+    "hash": "389f7df37a3e464d52a86c33860c658b",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/models/retraining_state.json"
+  },
+  {
+    "frontend_file": "frontend/ml-service/models/v1/feature_columns.json",
+    "frontend_rel": "ml-service/models/v1/feature_columns.json",
+    "size": 247,
+    "hash": "51dff7113eaaf401855f440d157a8e1f",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/models/v1/feature_columns.json"
+  },
+  {
+    "frontend_file": "frontend/ml-service/models/v1/metadata.json",
+    "frontend_rel": "ml-service/models/v1/metadata.json",
+    "size": 673,
+    "hash": "85ee7f646a32d926ecaa25b0e9cbf51c",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/models/v1/metadata.json"
+  },
+  {
+    "frontend_file": "frontend/ml-service/tests/test_build_real_dataset.py",
+    "frontend_rel": "ml-service/tests/test_build_real_dataset.py",
+    "size": 6902,
+    "hash": "10d2aea356d8088099960aeb35bb217a",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/tests/test_build_real_dataset.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/tests/test_compare_models.py",
+    "frontend_rel": "ml-service/tests/test_compare_models.py",
+    "size": 5315,
+    "hash": "00ba1675ada299387ec94ebb59d0c5d5",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/tests/test_compare_models.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/tests/test_model_registry.py",
+    "frontend_rel": "ml-service/tests/test_model_registry.py",
+    "size": 8249,
+    "hash": "59129a95644131f7d25d892ed3066603",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/tests/test_model_registry.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/tests/test_retrain.py",
+    "frontend_rel": "ml-service/tests/test_retrain.py",
+    "size": 4915,
+    "hash": "5e0b50d7cf7bca85cab91ad172f42ee5",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/tests/test_retrain.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/tests/test_train_model_v2.py",
+    "frontend_rel": "ml-service/tests/test_train_model_v2.py",
+    "size": 5027,
+    "hash": "14f590a33a8791799cd20547dd91c55d",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/tests/test_train_model_v2.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/training/build_real_dataset.py",
+    "frontend_rel": "ml-service/training/build_real_dataset.py",
+    "size": 8824,
+    "hash": "0bc40506f4b70a8a4cdd4da4717ba377",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/training/build_real_dataset.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/training/check_retraining_eligibility.py",
+    "frontend_rel": "ml-service/training/check_retraining_eligibility.py",
+    "size": 2385,
+    "hash": "f45c0a6f7f77a9ff0125fe79b0b2918b",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/training/check_retraining_eligibility.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/training/compare_models.py",
+    "frontend_rel": "ml-service/training/compare_models.py",
+    "size": 11279,
+    "hash": "8c34992f762e3e5c17f8435645e9403e",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/training/compare_models.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/training/generate_dataset.py",
+    "frontend_rel": "ml-service/training/generate_dataset.py",
+    "size": 9489,
+    "hash": "4a387be880396c30170e7a25035a9e5a",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/training/generate_dataset.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/training/retrain.py",
+    "frontend_rel": "ml-service/training/retrain.py",
+    "size": 13387,
+    "hash": "8e9e8b26d4a4712673df082c223324fb",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/training/retrain.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/training/train.py",
+    "frontend_rel": "ml-service/training/train.py",
+    "size": 475,
+    "hash": "fd9132a36de5c7d2c2ee730a9d2ac407",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/training/train.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/training/train_model.py",
+    "frontend_rel": "ml-service/training/train_model.py",
+    "size": 5253,
+    "hash": "71dce5efed7882c83b3da1493a82ad77",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/training/train_model.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/training/train_model_v2.py",
+    "frontend_rel": "ml-service/training/train_model_v2.py",
+    "size": 8801,
+    "hash": "b2adcbff0a6297fee6f75f50cd464b6b",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/training/train_model_v2.py"
+  },
+  {
+    "frontend_file": "frontend/ml-service/training/__init__.py",
+    "frontend_rel": "ml-service/training/__init__.py",
+    "size": 61,
+    "hash": "8a4dd279a5a5a7011625019992a6ae86",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "ml-service/training/__init__.py"
+  },
+  {
+    "frontend_file": "frontend/public/favicon.svg",
+    "frontend_rel": "public/favicon.svg",
+    "size": 9522,
+    "hash": "7e840862161341271697daa99a40d76b",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/public/icons.svg",
+    "frontend_rel": "public/icons.svg",
+    "size": 5055,
+    "hash": "21c7473c592c67dc87223d49892c8f0a",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/scratch/analyze_dataset.py",
+    "frontend_rel": "scratch/analyze_dataset.py",
+    "size": 3880,
+    "hash": "5ae304bcab1c0550c4d91959d0951507",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "scratch/analyze_dataset.py"
+  },
+  {
+    "frontend_file": "frontend/scratch/audit_course_quality.py",
+    "frontend_rel": "scratch/audit_course_quality.py",
+    "size": 1462,
+    "hash": "5d91338719ac83af667a466628f86f07",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "scratch/audit_course_quality.py"
+  },
+  {
+    "frontend_file": "frontend/scratch/compare_courses.py",
+    "frontend_rel": "scratch/compare_courses.py",
+    "size": 2853,
+    "hash": "96c456a08e93288949202086973b1826",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "scratch/compare_courses.py"
+  },
+  {
+    "frontend_file": "frontend/scratch/compare_skills_and_db.py",
+    "frontend_rel": "scratch/compare_skills_and_db.py",
+    "size": 4315,
+    "hash": "b17eecac0cf1296e1947529576c22a36",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "scratch/compare_skills_and_db.py"
+  },
+  {
+    "frontend_file": "frontend/scratch/course_comparison_report.json",
+    "frontend_rel": "scratch/course_comparison_report.json",
+    "size": 2066,
+    "hash": "7dc6f3437b9cd78a5a29a1fe0a28cd09",
+    "match_type": "EXACT_DUPLICATE",
+    "matched_root_file": "scratch/course_comparison_report.json"
+  },
+  {
+    "frontend_file": "frontend/scratch/dataset_summary.json",
+    "frontend_rel": "scratch/dataset_summary.json",
+    "size": 4469,
+    "hash": "bab2baffd3d1a05eaeb2b3344b155731",
+    "match_type": "EXACT_DUPLICATE",
+    "matched_root_file": "scratch/dataset_summary.json"
+  },
+  {
+    "frontend_file": "frontend/scratch/export_techbot_json.py",
+    "frontend_rel": "scratch/export_techbot_json.py",
+    "size": 960,
+    "hash": "860f19ab6b40ffad4abb369b5af4e114",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "scratch/export_techbot_json.py"
+  },
+  {
+    "frontend_file": "frontend/scratch/generate_skill_mapping_table.py",
+    "frontend_rel": "scratch/generate_skill_mapping_table.py",
+    "size": 5416,
+    "hash": "dfa9aba2bd869ce55e0afc0228d0bc85",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "scratch/generate_skill_mapping_table.py"
+  },
+  {
+    "frontend_file": "frontend/scratch/inspect_skill_mappings.py",
+    "frontend_rel": "scratch/inspect_skill_mappings.py",
+    "size": 1526,
+    "hash": "8a21c646bca788a61b356744d36a281c",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "scratch/inspect_skill_mappings.py"
+  },
+  {
+    "frontend_file": "frontend/scratch/inspect_techbot.py",
+    "frontend_rel": "scratch/inspect_techbot.py",
+    "size": 2240,
+    "hash": "46172eca9e664a40a7df2f3aade6654c",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "scratch/inspect_techbot.py"
+  },
+  {
+    "frontend_file": "frontend/scratch/list_seeded_courses.py",
+    "frontend_rel": "scratch/list_seeded_courses.py",
+    "size": 510,
+    "hash": "6b8f09e083033bec37c71031218f6eee",
+    "match_type": "MODIFIED_DUPLICATE",
+    "matched_root_file": "scratch/list_seeded_courses.py"
+  },
+  {
+    "frontend_file": "frontend/scratch/skills_diff_report.json",
+    "frontend_rel": "scratch/skills_diff_report.json",
+    "size": 9170,
+    "hash": "003c2b131152e5a5ad637ec7ec1b57ad",
+    "match_type": "EXACT_DUPLICATE",
+    "matched_root_file": "scratch/skills_diff_report.json"
+  },
+  {
+    "frontend_file": "frontend/src/App.tsx",
+    "frontend_rel": "src/App.tsx",
+    "size": 2388,
+    "hash": "6e9d888b9c8568ce5a6e42e411f1f4c9",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/index.css",
+    "frontend_rel": "src/index.css",
+    "size": 601,
+    "hash": "01d45b73d9b3e204f3abdee78a1bc337",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/main.tsx",
+    "frontend_rel": "src/main.tsx",
+    "size": 241,
+    "hash": "a3b85fddc47370b750c960f63cab9aba",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/vite-env.d.ts",
+    "frontend_rel": "src/vite-env.d.ts",
+    "size": 167,
+    "hash": "680247a0b76eebd2af1860e2253e9831",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/api/client.ts",
+    "frontend_rel": "src/api/client.ts",
+    "size": 2702,
+    "hash": "49741ca8e8bcea8bc36b05c6fa97d798",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/api/types.ts",
+    "frontend_rel": "src/api/types.ts",
+    "size": 4340,
+    "hash": "df9fe41d150be30a2a8871cfab051d5d",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/assets/hero.png",
+    "frontend_rel": "src/assets/hero.png",
+    "size": 13057,
+    "hash": "aead493361b27e7510691c5d7072dfc1",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/assets/typescript.svg",
+    "frontend_rel": "src/assets/typescript.svg",
+    "size": 1304,
+    "hash": "fa53d20a9bc823772c0d35440f334543",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/assets/vite.svg",
+    "frontend_rel": "src/assets/vite.svg",
+    "size": 8710,
+    "hash": "6d5180a782d64c8cf51ba01c2a2184d8",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/layout/AppLayout.tsx",
+    "frontend_rel": "src/components/layout/AppLayout.tsx",
+    "size": 2354,
+    "hash": "b2218508c312e17de87ecf8be6fa14d3",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/layout/ProtectedRoute.tsx",
+    "frontend_rel": "src/components/layout/ProtectedRoute.tsx",
+    "size": 1407,
+    "hash": "d1d6bc09ae47b5dd5fcb573b035f05b0",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/three/HeroScene.tsx",
+    "frontend_rel": "src/components/three/HeroScene.tsx",
+    "size": 2444,
+    "hash": "f630919bc0f2618840655a80a93e4699",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/three/LearningPathScene.tsx",
+    "frontend_rel": "src/components/three/LearningPathScene.tsx",
+    "size": 2128,
+    "hash": "aea7a701fe6244500ee9651675174c0f",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/three/ParticleField.tsx",
+    "frontend_rel": "src/components/three/ParticleField.tsx",
+    "size": 1540,
+    "hash": "a587968b3a708c151bf847b4fd10cc0e",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/three/ProgressOrbit.tsx",
+    "frontend_rel": "src/components/three/ProgressOrbit.tsx",
+    "size": 1459,
+    "hash": "72d7f8c3b407a057521c78a07bc51835",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/three/SkillGlobe.tsx",
+    "frontend_rel": "src/components/three/SkillGlobe.tsx",
+    "size": 4532,
+    "hash": "5b3b87421948cb0e0811e37adedf02a7",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/ui/ErrorMessage.tsx",
+    "frontend_rel": "src/components/ui/ErrorMessage.tsx",
+    "size": 220,
+    "hash": "5995c86cf59b80e1da7f493211b6278f",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/ui/LoadingSpinner.tsx",
+    "frontend_rel": "src/components/ui/LoadingSpinner.tsx",
+    "size": 337,
+    "hash": "4ff18ce828bd7fb50f8f5de694fef0a9",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/ui/PageHeader.tsx",
+    "frontend_rel": "src/components/ui/PageHeader.tsx",
+    "size": 559,
+    "hash": "395b477c48ed2165e0cd885823255033",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/components/ui/StatCard.tsx",
+    "frontend_rel": "src/components/ui/StatCard.tsx",
+    "size": 544,
+    "hash": "33e6ee04071081d12bcac367e95e55c0",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/context/AuthContext.tsx",
+    "frontend_rel": "src/context/AuthContext.tsx",
+    "size": 4937,
+    "hash": "33a4c029df418edf3cc7fe49b02e4656",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/pages/AdaptiveLearningPage.tsx",
+    "frontend_rel": "src/pages/AdaptiveLearningPage.tsx",
+    "size": 2994,
+    "hash": "928f8cf61d7727401ddfd363a9dc53bc",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/pages/AuthPages.tsx",
+    "frontend_rel": "src/pages/AuthPages.tsx",
+    "size": 12412,
+    "hash": "f4a57ec47be1619d6a220c7ca3d5c14d",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/pages/CareerSelectionPage.tsx",
+    "frontend_rel": "src/pages/CareerSelectionPage.tsx",
+    "size": 3165,
+    "hash": "5c2eb7d517ac420064956e2bb60a05f0",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/pages/DashboardPage.tsx",
+    "frontend_rel": "src/pages/DashboardPage.tsx",
+    "size": 3798,
+    "hash": "36ba6d61bfe5d05cf7393f9b877904e7",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/pages/LandingPage.tsx",
+    "frontend_rel": "src/pages/LandingPage.tsx",
+    "size": 2553,
+    "hash": "13c31848f2299e9478373bf9928fa935",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/pages/LearningPathPage.tsx",
+    "frontend_rel": "src/pages/LearningPathPage.tsx",
+    "size": 3955,
+    "hash": "519ec0982b3f16a14fc9d9f4d91ea456",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/pages/ProfilePage.tsx",
+    "frontend_rel": "src/pages/ProfilePage.tsx",
+    "size": 6413,
+    "hash": "9142f6f771e1cfa4778a8151dcd71a2b",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/pages/ProgressPage.tsx",
+    "frontend_rel": "src/pages/ProgressPage.tsx",
+    "size": 4781,
+    "hash": "454c590ee9867ebbf4d87ad03a2d20f4",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/pages/RecommendationsPage.tsx",
+    "frontend_rel": "src/pages/RecommendationsPage.tsx",
+    "size": 3137,
+    "hash": "74ddf87b3826d823359ee3d8c4cf147b",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  },
+  {
+    "frontend_file": "frontend/src/pages/SkillGapPage.tsx",
+    "frontend_rel": "src/pages/SkillGapPage.tsx",
+    "size": 3200,
+    "hash": "2990f84b2f4f89b5790119a969b8cab8",
+    "match_type": "UNIQUE",
+    "matched_root_file": null
+  }
+]

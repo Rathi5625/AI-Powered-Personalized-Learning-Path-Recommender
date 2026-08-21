@@ -36,6 +36,9 @@ class AuthServiceTest {
     @Mock
     private JwtService jwtService;
 
+    @Mock
+    private OtpService otpService;
+
     @InjectMocks
     private AuthService authService;
 
@@ -50,8 +53,10 @@ class AuthServiceTest {
                 .email("john@example.com")
                 .passwordHash("$2a$10$hashedPassword")
                 .targetCareer("Frontend Developer")
+                .emailVerified(true)
                 .build();
     }
+
 
     @Test
     @DisplayName("1. Successful signup saves hashed password and returns safe response")

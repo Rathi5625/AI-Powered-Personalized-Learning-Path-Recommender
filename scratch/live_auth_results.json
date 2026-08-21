@@ -1,0 +1,11 @@
+{
+  "proxy_health": true,
+  "test_a_invalid_creds": true,
+  "test_b_admin_login": true,
+  "test_b2_signup": true,
+  "test_b2_login": true,
+  "test_c_auth_me": true,
+  "test_c2_user_scoped": true,
+  "test_e_invalid_token": true,
+  "test_f_cross_user_forbidden": true
+}

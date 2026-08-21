@@ -1,0 +1,10 @@
+{
+  "test_1_generate_path_200": true,
+  "test_2_response_structure": true,
+  "test_3_course_validity": true,
+  "test_4_skill_validity": true,
+  "test_5_active_path_retrieval": true,
+  "test_6_adapt_path_200": true,
+  "test_7_unauthorized_401": true,
+  "test_8_cross_user_403": true
+}

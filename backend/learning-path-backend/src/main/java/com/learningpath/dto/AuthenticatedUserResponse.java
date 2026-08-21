@@ -18,6 +18,8 @@ public record AuthenticatedUserResponse(
         Integer dailyLearningHours,
         LearningStyle learningStyle,
         PreferredContentType preferredContentType,
+        Boolean emailVerified,
+        Boolean onboardingCompleted,
         Instant createdAt,
         Instant updatedAt
 ) {
@@ -33,6 +35,20 @@ public record AuthenticatedUserResponse(
             Instant createdAt,
             Instant updatedAt
     ) {
-        this(id, name, email, UserRole.USER, targetCareer, experienceLevel, dailyLearningHours, learningStyle, preferredContentType, createdAt, updatedAt);
+        this(
+                id,
+                name,
+                email,
+                UserRole.USER,
+                targetCareer,
+                experienceLevel,
+                dailyLearningHours,
+                learningStyle,
+                preferredContentType,
+                true,
+                (targetCareer != null && !targetCareer.isBlank() && experienceLevel != null),
+                createdAt,
+                updatedAt
+        );
     }
 }

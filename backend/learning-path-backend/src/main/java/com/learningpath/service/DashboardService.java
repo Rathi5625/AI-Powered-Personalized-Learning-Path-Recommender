@@ -44,12 +44,9 @@ public class DashboardService {
         UserResponse user = userService.getUserById(userId);
 
         // 2. Active Learning Path (null if none active)
-        ActiveLearningPathResponse activePath = null;
-        try {
-            activePath = learningPathPersistenceService.getActivePath(userId);
-        } catch (ResourceNotFoundException e) {
-            log.debug("[DashboardService] No active learning path for userId={}", userId);
-        }
+        ActiveLearningPathResponse activePath = learningPathPersistenceService
+                .findActivePath(userId)
+                .orElse(null);
 
         // 3. Progress Summary
         UserProgressSummaryResponse progressSummary = userProgressService.getProgressSummary(userId);

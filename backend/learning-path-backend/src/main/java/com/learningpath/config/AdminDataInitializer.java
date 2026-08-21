@@ -43,6 +43,10 @@ public class AdminDataInitializer implements CommandLineRunner {
                 existingUser.setRole(UserRole.ADMIN);
                 updated = true;
             }
+            if (!existingUser.isEmailVerified()) {
+                existingUser.setEmailVerified(true);
+                updated = true;
+            }
 
             if (updated) {
                 userRepository.save(existingUser);
@@ -60,6 +64,7 @@ public class AdminDataInitializer implements CommandLineRunner {
                     .targetCareer("Platform Architecture & System Administration")
                     .experienceLevel(ExperienceLevel.ADVANCED)
                     .dailyLearningHours(4)
+                    .emailVerified(true)
                     .build();
 
             User savedAdmin = userRepository.save(admin);

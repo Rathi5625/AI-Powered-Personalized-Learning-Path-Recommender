@@ -149,6 +149,10 @@ class AdminAuthenticationIntegrationTest {
                 "Data Engineer", null, null, null, null
         ));
 
+        User user = userRepository.findByEmail(email).orElseThrow();
+        user.setEmailVerified(true);
+        userRepository.save(user);
+
         LoginRequest loginRequest = new LoginRequest(email, "Password123!");
 
         getMockMvc().perform(post("/api/auth/login")
@@ -157,4 +161,5 @@ class AdminAuthenticationIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.user.role").value("USER"));
     }
+
 }

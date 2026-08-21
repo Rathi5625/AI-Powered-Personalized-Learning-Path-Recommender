@@ -1,0 +1,10 @@
+{
+  "test_1_ml_health_200": true,
+  "test_2_ml_model_info_200": true,
+  "test_3_ml_predict_200": true,
+  "test_4_hybrid_ml_online": true,
+  "test_5_hybrid_formula_match": true,
+  "test_6_ranking_order_valid": true,
+  "test_7_unauthorized_401": true,
+  "test_8_cross_user_403": true
+}

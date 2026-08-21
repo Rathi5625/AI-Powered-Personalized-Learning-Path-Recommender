@@ -1,0 +1,10 @@
+{
+  "test_1_recommendations_status_200": true,
+  "test_2_recommendation_count": true,
+  "test_3_real_course_identity": true,
+  "test_4_course_fields": true,
+  "test_5_ranking_preserved": true,
+  "test_6_career_context_gap_connection": true,
+  "test_7_unauthorized_401": true,
+  "test_8_cross_user_403": true
+}

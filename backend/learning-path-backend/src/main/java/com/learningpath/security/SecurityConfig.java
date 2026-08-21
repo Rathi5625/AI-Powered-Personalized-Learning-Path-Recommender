@@ -79,11 +79,23 @@ public class SecurityConfig {
                         })
                 )
                 .authorizeHttpRequests(auth -> auth
+                        // Preflight OPTIONS requests
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+
                         // Admin Endpoints - requires ADMIN role
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
 
                         // Public Auth Endpoints
-                        .requestMatchers(HttpMethod.POST, "/api/auth/signup", "/api/auth/login").permitAll()
+                        .requestMatchers(HttpMethod.POST,
+                                "/api/auth/signup",
+                                "/api/auth/register",
+                                "/api/auth/login",
+                                "/api/auth/verify-email-otp",
+                                "/api/auth/resend-otp",
+                                "/api/auth/forgot-password",
+                                "/api/auth/verify-reset-otp",
+                                "/api/auth/reset-password"
+                        ).permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/auth/me").authenticated()
 
                         // Public Catalogs & Health
@@ -131,8 +143,8 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/users").permitAll() // Allow onboarding user creation
                         .requestMatchers(HttpMethod.GET, "/api/users").permitAll()
 
-                        // Any other request permit or authenticated
-                        .anyRequest().permitAll()
+                        // Any other request requires authentication
+                        .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
@@ -142,9 +154,15 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOriginPatterns(List.of("http://localhost:*", "http://127.0.0.1:*"));
+        configuration.setAllowedOriginPatterns(List.of(
+                "http://localhost:*",
+                "http://127.0.0.1:*",
+                "https://buf-correct-pad-booking.trycloudflare.com",
+                "https://*.trycloudflare.com"
+        ));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
-        configuration.setAllowedHeaders(List.of("Authorization", "Content-Type", "X-Requested-With", "Accept", "Origin"));
+        configuration.setAllowedHeaders(List.of("Authorization", "Content-Type", "X-Requested-With", "Accept", "Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers"));
+        configuration.setExposedHeaders(List.of("Authorization"));
         configuration.setAllowCredentials(true);
         configuration.setMaxAge(3600L);
 

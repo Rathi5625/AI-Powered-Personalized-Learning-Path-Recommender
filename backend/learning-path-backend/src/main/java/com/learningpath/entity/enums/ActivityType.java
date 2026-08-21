@@ -1,0 +1,15 @@
+package com.learningpath.entity.enums;
+
+public enum ActivityType {
+    COURSE_VIEW,
+    COURSE_ENROLL,
+    LESSON_COMPLETE,
+    ASSESSMENT_START,
+    ASSESSMENT_SUBMIT,
+    PROJECT_START,
+    PROJECT_UPDATE,
+    PROJECT_COMPLETE,
+    RECOMMENDATION_CLICK,
+    LOGIN,
+    PROFILE_UPDATE
+}

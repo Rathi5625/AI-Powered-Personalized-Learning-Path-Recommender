@@ -22,7 +22,7 @@ public class GeminiConfig {
     @Value("${gemini.api.url:https://generativelanguage.googleapis.com/v1beta}")
     private String apiUrl;
 
-    @Value("${gemini.model:gemini-1.5-flash}")
+    @Value("${gemini.model:gemini-2.5-flash}")
     private String model;
 
     @Value("${gemini.timeout.seconds:10}")
@@ -31,7 +31,8 @@ public class GeminiConfig {
     @PostConstruct
     public void validateConfig() {
         if (apiKey == null || apiKey.trim().isEmpty()) {
-            log.warn("[GeminiConfig] Gemini API key is not configured. Generative AI integration is disabled or operating in fallback mode.");
+            log.warn(
+                    "[GeminiConfig] Gemini API key is not configured. Generative AI integration is disabled or operating in fallback mode.");
         } else {
             log.info("[GeminiConfig] Gemini API integration initialized with model: {}", model);
         }

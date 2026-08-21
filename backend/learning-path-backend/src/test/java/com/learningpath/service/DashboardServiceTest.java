@@ -95,7 +95,7 @@ class DashboardServiceTest {
                 Instant.now(),
                 Instant.now()
         );
-        when(learningPathPersistenceService.getActivePath(userId)).thenReturn(activePath);
+        when(learningPathPersistenceService.findActivePath(userId)).thenReturn(Optional.of(activePath));
 
         UserProgressSummaryResponse progressSummary = new UserProgressSummaryResponse(4, 2, 1, 1, 0, 50.0);
         when(userProgressService.getProgressSummary(userId)).thenReturn(progressSummary);
@@ -158,7 +158,7 @@ class DashboardServiceTest {
     @DisplayName("3 & 4. Active learning path not found returns null without crashing")
     void testGetDashboard_NoActiveLearningPath() {
         when(userService.getUserById(userId)).thenReturn(mockUser);
-        when(learningPathPersistenceService.getActivePath(userId)).thenThrow(new ResourceNotFoundException("No active path"));
+        when(learningPathPersistenceService.findActivePath(userId)).thenReturn(Optional.empty());
         when(userProgressService.getProgressSummary(userId)).thenReturn(new UserProgressSummaryResponse(0, 0, 0, 0, 0, 0.0));
         when(careerRepository.findByTitle("Frontend Developer")).thenReturn(Optional.empty());
 

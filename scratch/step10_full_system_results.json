@@ -1,0 +1,21 @@
+{
+  "1_backend_health": true,
+  "2_signup_flow": true,
+  "3_login_flow": true,
+  "4_auth_me": true,
+  "5_career_retrieval": true,
+  "6_profile_update_persistence": true,
+  "7_skill_gap_analysis": true,
+  "7b_dag_prerequisites": true,
+  "8_ml_hybrid_scoring": true,
+  "9_gemini_ai_reasoning": true,
+  "10_learning_path_generation_and_active": true,
+  "11_progress_persistence": true,
+  "11b_completion_invariant": true,
+  "12_adaptive_learning": true,
+  "13_dashboard_aggregation": true,
+  "14a_security_401": true,
+  "14b_security_403": true,
+  "15a_input_validation_percentage_400": true,
+  "15b_input_validation_career_404": true
+}

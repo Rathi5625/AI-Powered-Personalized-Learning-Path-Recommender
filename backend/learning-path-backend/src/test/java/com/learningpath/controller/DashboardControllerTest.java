@@ -1,10 +1,13 @@
 package com.learningpath.controller;
 
+import com.learningpath.dto.DashboardAggregatedResponse;
 import com.learningpath.dto.DashboardResponse;
 import com.learningpath.dto.UserProgressSummaryResponse;
 import com.learningpath.dto.UserResponse;
+import com.learningpath.entity.enums.ExperienceLevel;
 import com.learningpath.exception.GlobalExceptionHandler;
 import com.learningpath.exception.ResourceNotFoundException;
+import com.learningpath.service.DashboardAggregationService;
 import com.learningpath.service.DashboardService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -29,6 +32,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class DashboardControllerTest {
 
     private MockMvc mockMvc;
+
+    @Mock
+    private DashboardAggregationService dashboardAggregationService;
 
     @Mock
     private DashboardService dashboardService;
@@ -73,5 +79,37 @@ class DashboardControllerTest {
 
         mockMvc.perform(get("/api/users/" + userId + "/dashboard"))
                 .andExpect(status().isNotFound());
+    }
+
+    @Test
+    @DisplayName("GET /api/dashboard/users/{userId} returns 200 OK")
+    void testGetAggregatedDashboard_Success() throws Exception {
+        DashboardAggregatedResponse dashboard = new DashboardAggregatedResponse(
+                userId,
+                "Parth",
+                "Full Stack",
+                ExperienceLevel.INTERMEDIATE,
+                68,
+                7,
+                32.5,
+                2,
+                1,
+                8,
+                0,
+                null,
+                List.of(),
+                List.of(),
+                List.of(),
+                List.of(),
+                List.of()
+        );
+
+        when(dashboardAggregationService.getDashboardData(userId)).thenReturn(dashboard);
+
+        mockMvc.perform(get("/api/dashboard/users/" + userId))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.userName").value("Parth"))
+                .andExpect(jsonPath("$.activeStreakDays").value(7))
+                .andExpect(jsonPath("$.totalSkillsCount").value(8));
     }
 }

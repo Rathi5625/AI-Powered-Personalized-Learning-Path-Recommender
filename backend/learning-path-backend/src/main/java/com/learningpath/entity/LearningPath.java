@@ -17,6 +17,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.Instant;
+import java.util.UUID;
+
 @Entity
 @Table(
         name = "learning_paths",
@@ -50,4 +53,33 @@ public class LearningPath extends BaseEntity {
     @Column(nullable = false, length = 30)
     @Builder.Default
     private LearningPathStatus status = LearningPathStatus.ACTIVE;
+
+    @Column(name = "version", nullable = false)
+    @Builder.Default
+    private Integer version = 1;
+
+    @Column(name = "overall_progress", nullable = false)
+    @Builder.Default
+    private Double overallProgress = 0.0;
+
+    @Column(name = "estimated_total_hours")
+    @Builder.Default
+    private Double estimatedTotalHours = 0.0;
+
+    @Column(name = "completed_hours")
+    @Builder.Default
+    private Double completedHours = 0.0;
+
+    @Column(name = "current_node_id")
+    private UUID currentNodeId;
+
+    @Column(name = "quality_score")
+    @Builder.Default
+    private Double qualityScore = 90.0;
+
+    @Column(name = "last_recalculated_at")
+    private Instant lastRecalculatedAt;
+
+    @Column(name = "recalculation_reason", length = 255)
+    private String recalculationReason;
 }

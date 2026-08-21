@@ -22,14 +22,22 @@ public class DotenvPropertyInitializer implements ApplicationContextInitializer<
 
         File envFile = findDotenvFile();
         if (envFile == null || !envFile.exists()) {
+            log.info("[DotenvPropertyInitializer] No local .env file found. Using system environment variables.");
             return;
         }
 
         try {
             Map<String, Object> envProperties = parseEnvFile(envFile);
             if (!envProperties.isEmpty()) {
-                environment.getPropertySources().addLast(new MapPropertySource("dotenvProperties", envProperties));
-                log.info("[DotenvPropertyInitializer] Loaded {} environment variables from {}", envProperties.size(), envFile.getAbsolutePath());
+                // Populate system properties so Spring ${PLACEHOLDER} resolution and JavaMailSender resolve properly
+                for (Map.Entry<String, Object> entry : envProperties.entrySet()) {
+                    if (System.getProperty(entry.getKey()) == null && System.getenv(entry.getKey()) == null) {
+                        System.setProperty(entry.getKey(), entry.getValue().toString());
+                    }
+                }
+                environment.getPropertySources().addFirst(new MapPropertySource("dotenvProperties", envProperties));
+                log.info("[DotenvPropertyInitializer] Successfully loaded {} environment variables from {}",
+                        envProperties.size(), envFile.getAbsolutePath());
             }
         } catch (Exception e) {
             log.warn("[DotenvPropertyInitializer] Could not parse .env file: {}", e.getMessage());
@@ -37,12 +45,27 @@ public class DotenvPropertyInitializer implements ApplicationContextInitializer<
     }
 
     private File findDotenvFile() {
-        File f1 = new File(".env");
-        if (f1.exists()) return f1;
+        String userDir = System.getProperty("user.dir", ".");
+        File[] candidates = new File[] {
+                new File(".env"),
+                new File("backend/learning-path-backend/.env"),
+                new File("../.env"),
+                new File(userDir, ".env"),
+                new File(userDir, "backend/learning-path-backend/.env"),
+                new File(userDir, "../.env")
+        };
 
-        File f2 = new File("backend/learning-path-backend/.env");
-        if (f2.exists()) return f2;
-
+        for (File candidate : candidates) {
+            try {
+                if (candidate.exists() && candidate.isFile()) {
+                    return candidate.getCanonicalFile();
+                }
+            } catch (IOException ignored) {
+                if (candidate.exists() && candidate.isFile()) {
+                    return candidate;
+                }
+            }
+        }
         return null;
     }
 

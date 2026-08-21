@@ -1,0 +1,12 @@
+{
+  "test_1_get_progress_200": true,
+  "test_3_update_progress_200": true,
+  "test_2_record_validity": true,
+  "test_4_persistence": true,
+  "test_5_completion_state": true,
+  "test_6_invalid_percentage_rejected_400": true,
+  "test_7_unauthorized_401": true,
+  "test_8_cross_user_403": true,
+  "test_9_adaptive_compatibility": true,
+  "test_10_dashboard_aggregation": true
+}

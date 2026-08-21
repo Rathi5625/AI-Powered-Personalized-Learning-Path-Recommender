@@ -1,0 +1,10 @@
+{
+  "test_1_recommendation_request_200": true,
+  "test_2_structured_reasoning_present": true,
+  "test_3_grounded_explanation_context": true,
+  "test_4_anti_hallucination_course_ids": true,
+  "test_5_deterministic_fallback_resilience": true,
+  "test_6_no_api_key_in_response": true,
+  "test_7_frontend_never_calls_gemini_directly": true,
+  "test_8_full_pipeline_rule_ml_gemini": true
+}
